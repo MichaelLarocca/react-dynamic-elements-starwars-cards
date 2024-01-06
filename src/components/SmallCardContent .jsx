@@ -1,10 +1,10 @@
-function SmallCardContent(){
+function SmallCardContent({name, image}){
 
     return (
         <div className="small-card">
-            <img></img>
+            <img src={image} alt={name}></img>
             <div>-</div>
-            <p>NAME</p>
+            <p>{name}</p>
         </div>
     )
 }

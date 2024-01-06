@@ -1,12 +1,13 @@
-function LargeCardContent() {
+function LargeCardContent({name, image, about}) {
     return (
         <div className="large-card">
             <div>
-                <img></img>
+                <img src={image} alt={name}></img>
             </div>
-            <div>
-                <h1>TITLE</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga natus voluptatibus hic perferendis, temporibus sed adipisci rem, sunt voluptas veritatis sit facilis. A, id. Similique aliquam possimus magnam nobis fugit?</p>
+            <div className="about">
+                <div>-</div>
+                <h1>{name}</h1>
+                <p>{about}</p>
             </div>
         </div>    
     )

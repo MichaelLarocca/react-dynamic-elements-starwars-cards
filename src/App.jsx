@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useState } from 'react';
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import StarWarsCard from './components/StarWarsCard'
-import SmallCardContent from './components/SmallCardContent '
-import LargeCardContent from './components/LargeCardContent'
-import './App.css'
+import StarWarsCard from './components/StarWarsCard';
+import SmallCardContent from './components/SmallCardContent ';
+import LargeCardContent from './components/LargeCardContent';
+import characters from './data';
+import './App.css';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,13 +14,46 @@ function App() {
     <>
     <nav>STAR WARS</nav>
     <section className="small-card-container">
-      <StarWarsCard type="div" contentType={SmallCardContent} layout="small-card" theme="dark-theme" interaction="clickable" />
-      <div>CARD 2</div>
-      <div>CARD 3</div>
-      <div>CARD 4</div>
-      <div>CARD 5</div>
+      <StarWarsCard 
+        type="div" 
+        contentType={SmallCardContent} 
+        contentProps={{name: characters[0].name, image: characters[0].image}} 
+        layout="small-card" 
+        theme="dark-theme" 
+        interaction="clickable" 
+      />
+      <StarWarsCard 
+        type="div" 
+        contentType={SmallCardContent} 
+        contentProps={{name: characters[1].name, image: characters[1].image}} 
+        layout="small-card" 
+        theme="light-theme" 
+        interaction="clickable" 
+      />
+      <StarWarsCard 
+        type="div" 
+        contentType={SmallCardContent} 
+        contentProps={{name: characters[2].name, image: characters[2].image}} 
+        layout="small-card" 
+        theme="dark-theme" 
+        interaction="clickable" 
+      />
+      <StarWarsCard 
+        type="div" 
+        contentType={SmallCardContent} 
+        contentProps={{name: characters[3].name, image: characters[3].image}} 
+        layout="small-card" 
+        theme="dark-theme" 
+        interaction="clickable" 
+      />      
     </section>
-    <StarWarsCard type="article" contentType={LargeCardContent} layout="large-card" theme="dark-theme" interaction="hoverable" />
+    <StarWarsCard 
+        type="article" 
+        contentType={LargeCardContent} 
+        contentProps={{name: characters[1].name, image: characters[1].image, about: characters[1].about}} 
+        layout="large-card" 
+        theme="light-theme" 
+        interaction="hoverable" />
     </>
   )
 }
