@@ -1,4 +1,4 @@
-function StarWarsCard({ type, contentType, contentProps, layout, theme, interaction }) {
+function StarWarsCard({ type, contentType, contentProps, layout, theme, interaction, onClick }) {
     const Content = contentType;
     const Container = type;
     const Layout = layout;
@@ -6,8 +6,8 @@ function StarWarsCard({ type, contentType, contentProps, layout, theme, interact
     const Interaction = interaction;
   
     return (
-      <Container className={`${Layout} ${Theme} ${Interaction}`}>
-        <Content {...contentProps} />
+      <Container className={`${Layout} ${Theme} ${Interaction}`} onClick={onClick}>
+      <Content {...contentProps} />
       </Container>
     );
   }

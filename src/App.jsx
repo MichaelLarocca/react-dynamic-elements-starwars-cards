@@ -1,38 +1,27 @@
 import { useState } from 'react';
 import { mapCharacters } from './utils/mapFunctions';
-
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import StarWarsCard from './components/StarWarsCard';
-import SmallCardContent from './components/SmallCardContent';
 import LargeCardContent from './components/LargeCardContent';
 import characters from './data';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedCharacter, setSelectedCharacter] = useState(null);
 
   return (
     <>
     <nav>STAR WARS</nav>
     <section className="small-card-container">
-      {/* {characters.map((character, index) => (
-        <StarWarsCard 
-          key={index}
-          type="div" 
-          contentType={SmallCardContent} 
-          contentProps={{name: character.name, image: character.image}} 
-          layout="small-card" 
-          theme={"dark-theme"} 
-          interaction="clickable" 
-        />
-      ))} */}
-       {mapCharacters(characters, StarWarsCard)}
+       {mapCharacters(characters, StarWarsCard, setSelectedCharacter)}
     </section>
     <StarWarsCard 
         type="article" 
         contentType={LargeCardContent} 
-        contentProps={{name: characters[1].name, image: characters[1].image, about: characters[1].about}} 
+        contentProps={{
+          name: selectedCharacter ? selectedCharacter.name : characters[0].name, 
+          image: selectedCharacter ? selectedCharacter.image : characters[0].image, 
+          about: selectedCharacter ? selectedCharacter.about : characters[0].about
+      }} 
         layout="large-card" 
         theme="light-theme" 
         interaction="hoverable" />

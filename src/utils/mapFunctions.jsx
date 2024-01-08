@@ -1,6 +1,6 @@
 import SmallCardContent from '../components/SmallCardContent';
 
-export function mapCharacters(characters, Component) {
+export function mapCharacters(characters, Component, setSelectedCharacter) {
   return characters.map((character, index) => (
     <Component 
       key={index}
@@ -8,8 +8,9 @@ export function mapCharacters(characters, Component) {
       contentType={SmallCardContent} 
       contentProps={{name: character.name, image: character.image}} 
       layout="small-card" 
-      theme={"dark-theme"} 
-      interaction="clickable" 
+      theme="dark-theme" 
+      interaction="clickable"
+      onClick={() => setSelectedCharacter(character)}
     />
   ));
 }
