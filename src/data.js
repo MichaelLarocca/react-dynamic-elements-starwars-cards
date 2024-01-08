@@ -1,7 +1,9 @@
-import ahsoka from './images/ahsoka.jpeg';
-import sabine from './images/sabine.jpeg';
-import hera from './images/hera.jpeg';
-import ezra from './images/ezra.jpeg';
+// Characters
+import ahsoka from './images/characters/ahsoka.jpeg';
+import sabine from './images/characters/sabine.jpeg';
+import hera from './images/characters/hera.jpeg';
+import ezra from './images/characters/ezra.jpeg';
+
 
 const characters = [
     {
