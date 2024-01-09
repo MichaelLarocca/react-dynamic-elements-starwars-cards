@@ -66,7 +66,7 @@ body {
 }
 
 .lightsaber-saber {
-  background-color: white;
+  background-color: grey;
   width: 25px;
   height: 3px;
   position: relative;
@@ -74,9 +74,29 @@ body {
 }
 
 .lightsaber-saber-hilt {
-  background-color: black;
-  border: 3px sold blue !important;
+  background-color: grey;
+  width: 5px;
+  height: 3px;
+  border-radius: 5%;
+  margin-left: 3px;
 }
+
+.lightsaber-saber-active {
+  background-color: white;
+  width: 25px;
+  height: 3px;
+  position: relative;
+  border-radius: 50px;
+}
+
+.lightsaber-saber-hilt-active {
+  background-color: white;
+  width: 5px;
+  height: 3px;
+  border-radius: 5%;
+  margin-left: 3px;
+}
+
 
 /* .lightsaber-saber:before {
   content: "";
@@ -100,7 +120,7 @@ body {
 
 .lightsaber-saber.glow {
   box-shadow: 0 0 2px white, 0 0 4px white, 0 0 6px white, 0 0 8px white;
-  animation: pulse 2s infinite;
+  animation: pulse .01s infinite;
 }
 
 @keyframes pulse {
