@@ -11,8 +11,11 @@ function App() {
   return (
     <>
     <nav>STAR WARS</nav>
-    <section className="small-card-container">
+    {/* <section className="small-card-container">
        {mapCharacters(characters, StarWarsCard, setSelectedCharacter)}
+    </section> */}
+    <section className="small-card-container">
+      {mapCharacters(characters, StarWarsCard, setSelectedCharacter, selectedCharacter)}
     </section>
     <StarWarsCard 
         type="article" 
@@ -23,7 +26,8 @@ function App() {
           about: selectedCharacter ? selectedCharacter.about : characters[0].about
       }} 
         layout="large-card" 
-        theme="light-theme" 
+        // theme="light-theme" 
+        theme="dark-theme" 
         interaction="hoverable" />
     </>
   )
