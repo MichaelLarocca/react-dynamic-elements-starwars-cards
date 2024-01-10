@@ -1,13 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
+  min-width: 350px;
+}
 
+.small-card-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;  /* adjust as needed for space between cards */
+  padding: 10px;  /* adjust as needed for padding around the cards */
+}
 
+.small-card {
+  border: 1px solid rgba(0,0,0,.5);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,.1);
+}
+.small-card img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 
-nav {
+.large-card {
+  border: 3px solid grey;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+}
+.large-card img {
+  height: 100px;
+}
+.about {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+.dark-theme {
   background-color: black;
   color: white;
-  height: 50px;
+}
+
+.lightsaber {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
-  font-weight: bolder;
+  margin-top: 10px;
+}
+
+.lightsaber-saber {
+  background-color: grey;
+  width: 25px;
+  height: 3px;
+  position: relative;
+  border-radius: 50px;
+}
+
+.lightsaber-saber-hilt {
+  background-color: grey;
+  width: 5px;
+  height: 3px;
+  border-radius: 5%;
+  margin-left: 3px;
+}
+
+.lightsaber-saber-active {
+  background-color: white;
+  width: 25px;
+  height: 3px;
+  position: relative;
+  border-radius: 50px;
+}
+
+.lightsaber-saber-hilt-active {
+  background-color: white;
+  width: 5px;
+  height: 3px;
+  border-radius: 5%;
+  margin-left: 3px;
+}
+
+.lightsaber-saber.glow {
+  box-shadow: 0 0 2px white, 0 0 4px white, 0 0 6px white, 0 0 8px white;
+  animation: glow .01s infinite;
+}
+
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+  }
+  50% {
+    box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white;
+  }
+  100% {
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+  }
+}
+
+
+@media (min-width: 750px) {
+  .large-card {
+    flex-direction: row;
+  }
+  
+  .large-card img {
+    height: 300px;
+  }
 }

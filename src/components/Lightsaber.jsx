@@ -8,13 +8,3 @@ function Lightsaber({ isActive }) {
 }
 
 export default Lightsaber;
-
-// function Lightsaber({ isActive, className }) {
-//     const glowStyle = isActive ? "glow" : "";
-  
-//     return (
-//       <div className={`${className} ${glowStyle}`}></div>
-//     );
-//   }
-
-// export default Lightsaber;
