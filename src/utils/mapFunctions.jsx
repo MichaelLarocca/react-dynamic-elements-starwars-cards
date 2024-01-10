@@ -1,22 +1,19 @@
-import SmallCardContent from '../components/SmallCardContent';
-
-export function mapCharacters(characters, Component, setSelectedCharacter, selectedCharacter) {
-  return characters.map((character, index) => {
-      return (
-          <Component 
-              key={index} 
-              type="div" 
-              contentType={SmallCardContent} 
-              contentProps={{
-                  name: character.name, 
-                  image: character.image, 
-                  isSelected: selectedCharacter === character
-              }} 
-              layout="small-card" 
-              theme="dark-theme" 
-              interaction="clickable" 
-              onClick={() => setSelectedCharacter(character)} 
-          />
-      )
-  });
-}
+export function mapItems(items, Component, setSelectedItem, selectedItem, contentType) {
+    return items.map((item, index) => {
+        return (
+            <Component 
+                key={index} 
+                type="div" 
+                contentType={contentType} 
+                contentProps={{
+                    ...item,
+                    isSelected: selectedItem === item
+                }} 
+                layout="small-card" 
+                theme="dark-theme" 
+                interaction="clickable" 
+                onClick={() => setSelectedItem(item)} 
+            />
+        )
+    });
+  }

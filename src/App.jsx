@@ -1,30 +1,32 @@
 import { useState } from 'react';
-import { mapCharacters } from './utils/mapFunctions';
+import { mapItems } from './utils/mapFunctions';
+import { characters, creatures } from './data';
 import StarWarsCard from './components/StarWarsCard';
+import SmallCardContent from './components/SmallCardContent';
 import LargeCardContent from './components/LargeCardContent';
-import characters from './data';
 import './App.css';
 
 function App() {
-  const [selectedCharacter, setSelectedCharacter] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [items, setItems] = useState(characters); // or creatures, based on your requirement
 
   return (
     <>
     <nav>STAR WARS</nav>
     <section className="small-card-container">
-      {mapCharacters(characters, StarWarsCard, setSelectedCharacter, selectedCharacter)}
+      {mapItems(characters, StarWarsCard, setSelectedItem, selectedItem, SmallCardContent)}
     </section>
-    <StarWarsCard 
-        type="article" 
-        contentType={LargeCardContent} 
-        contentProps={{
-          name: selectedCharacter ? selectedCharacter.name : characters[0].name, 
-          image: selectedCharacter ? selectedCharacter.image : characters[0].image, 
-          about: selectedCharacter ? selectedCharacter.about : characters[0].about
-      }} 
-        layout="large-card" 
-        theme="dark-theme" 
-        interaction="hoverable" />
+        <StarWarsCard 
+            type="article" 
+            contentType={LargeCardContent} 
+            contentProps={{
+              name: selectedItem ? selectedItem.name : items[0].name, 
+              image: selectedItem ? selectedItem.image : items[0].image, 
+              about: selectedItem ? selectedItem.about : items[0].about
+            }} 
+            layout="large-card" 
+            theme="dark-theme" 
+            interaction="hoverable" />
     </>
   )
 }

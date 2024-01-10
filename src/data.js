@@ -7,6 +7,10 @@ import sabine from './images/characters/sabine.jpeg';
 import hera from './images/characters/hera.jpeg';
 import ezra from './images/characters/ezra.jpeg';
 
+// Creatures
+import howler from './images/creatures/howler.jpeg';
+import loth_cat from './images/creatures/loth-cat.jpeg';
+import purrgil from './images/creatures/purrgil.jpeg';
 
 const characters = [
     {
@@ -46,4 +50,22 @@ const characters = [
     }
 ];
 
-export default characters;
+const creatures = [
+    {
+        name: 'HOWLER',
+        image: howler,
+        about: 'Shaggy canids with fearsome, toothy jaws, the howlers of Peridea lope across the barren wilderness on long, slender legs, occasionally serving as mounts for bipedal travelers.'
+    },    
+    {
+        name: 'LOTH-CAT',
+        image: loth_cat,
+        about: 'A breed of feline native to Lothal and often found in the grassy plains of the Outer Rim planet, Loth-cats are small, temperamental animals. While at times they can be friendly — and indeed, make affectionate pets when domesticated — Loth-cats are able hunters with sharp teeth and claws.'
+    },
+    {
+        name: 'PURRGIL',
+        image: purrgil,
+        about: 'Massive space-whales, purrgil are rare creatures that are the stuff of many legends, dwelling neither on land nor sea. Purrgil propel themselves gracefully through space by flexing muscular tentacles along with several fins. Gulping interstellar gasses for sustenance to fuel their spectacular ability to naturally jump through hyperspace, pods of purrgil can occasionally be seen traveling.'
+    }   
+]
+
+export { characters, creatures };
