@@ -1,4 +1,4 @@
-  export function mapItems(items, Component, setSelectedItem, selectedItem, contentType) {
+export function mapItems(items, Component, setSelectedItem, selectedItem, contentType) {
     return items.map((item, index) => {
         return (
             <Component 
@@ -7,7 +7,7 @@
                 contentType={contentType} 
                 contentProps={{
                     ...item,
-                    isSelected: selectedItem === item || index === 0
+                    isSelected: selectedItem ? selectedItem === item : index === 0
                 }} 
                 layout="small-card" 
                 theme="dark-theme" 

@@ -8,15 +8,15 @@ import './App.css';
 
 function App() {
   const [selectedItem, setSelectedItem] = useState(null);
-  // const [items, setItems] = useState(characters); 
-  const [items, setItems] = useState(creatures); 
+  const [items, setItems] = useState(characters); 
+  // const [items, setItems] = useState(creatures); 
 
   return (
     <>
     <nav>STAR WARS</nav>
     <section className="small-card-container">
-      {/* {mapItems(characters, StarWarsCard, setSelectedItem, selectedItem, SmallCardContent)} */}
-      {mapItems(creatures, StarWarsCard, setSelectedItem, selectedItem, SmallCardContent)}
+      {mapItems(characters, StarWarsCard, setSelectedItem, selectedItem, SmallCardContent)}
+      {/* {mapItems(creatures, StarWarsCard, setSelectedItem, selectedItem, SmallCardContent)} */}
     </section>
         <StarWarsCard 
             type="article" 
