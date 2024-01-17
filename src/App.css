@@ -7,6 +7,23 @@ body {
   min-width: 350px;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  /* border: 1px solid greenyellow; */
+  height: 25px;
+  padding: 5px;
+}
+
+.logo.ahsoka {
+  width: 50%;
+}
+
 .small-card-container {
   display: flex;
   overflow-x: auto;

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { mapItems } from './utils/mapFunctions';
 import { characters, creatures, droids, locations, organizations, vehicles, weapons_and_tech } from './data';
+import star_wars_logo from './images/miscellaneous/star-wars-logo.png';
+import ahsoka_logo from './images/miscellaneous/ahsoka-logo.png';
 import StarWarsCard from './components/StarWarsCard';
 import SmallCardContent from './components/SmallCardContent';
 import LargeCardContent from './components/LargeCardContent';
@@ -17,7 +19,11 @@ function App() {
       
   return (
     <>
-    <nav>STAR WARS</nav>
+    <nav>
+        <div className='flex-col'>
+          <img src={star_wars_logo} className='logo' /><img src={ahsoka_logo} className='logo ahsoka'  />
+        </div>
+    </nav>
     <menu>
       <button onClick={()=>{setSelectedCategory(characters)}}>Characters</button>
       <button onClick={()=>{setSelectedCategory(creatures)}}>Creatures</button>
