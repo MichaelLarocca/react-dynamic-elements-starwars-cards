@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { mapItems } from './utils/mapFunctions';
 import { characters, creatures, droids, locations, organizations, vehicles, weapons_and_tech } from './data';
 import Navbar from './components/Navbar';
+// import ButtonMenu from './components/ButtonMenu';
 import StarWarsCard from './components/StarWarsCard';
 import SmallCardContent from './components/SmallCardContent';
 import LargeCardContent from './components/LargeCardContent';
@@ -28,6 +29,7 @@ function App() {
       <button onClick={()=>{setSelectedCategory(vehicles)}}>Vehicles</button>
       <button onClick={()=>{setSelectedCategory(weapons_and_tech)}}>Weapons & Tech</button>
     </menu>  
+    {/* <ButtonMenu /> */}
     <section className="small-card-container">
       {mapItems(selectedCategory, StarWarsCard, setSelectedItem, selectedItem, SmallCardContent)}
     </section>
