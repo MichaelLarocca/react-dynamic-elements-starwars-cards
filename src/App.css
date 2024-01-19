@@ -20,7 +20,7 @@ body {
 }
 
 .logo.ahsoka {
-  width: 50%;
+  width: 125px;
 }
 
 .small-card-container {
@@ -34,8 +34,14 @@ body {
   border: 1px solid rgba(0,0,0,.5);
   text-align: center;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px rgba(0,0,0,.1);
+  box-shadow: 3px 3px 3px rgba(0,0,0,.2);
 }
+
+.small-card:hover,
+.small-card:focus { 
+  cursor: pointer;
+}
+
 .small-card img {
   width: 150px;
   height: auto;
@@ -49,7 +55,7 @@ body {
   border: 3px solid grey;
   display: flex;
   flex-direction: column;
-  box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+  box-shadow: 5px 5px 5px rgba(0,0,0,.2);
 }
 .large-card img {
   height: 100px;
