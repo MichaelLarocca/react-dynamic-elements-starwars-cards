@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { mapItems } from './utils/mapFunctions';
 import { characters, creatures, droids, locations, organizations, vehicles, weapons_and_tech } from './data.js';
-import Menu from './components/Menu';
 import Navbar from './components/Navbar';
 import StarWarsCard from './components/StarWarsCard';
 import SmallCardContent from './components/SmallCardContent';
@@ -20,10 +19,9 @@ function App() {
       
   return (
     <>
-    <Navbar />
-    <Menu 
-      setSelectedCategory={setSelectedCategory} 
+    <Navbar 
       categories={categories}
+      setSelectedCategory={setSelectedCategory}
     />
     <section className="small-card-container">
       {mapItems(selectedCategory, StarWarsCard, setSelectedItem, selectedItem, SmallCardContent)}
