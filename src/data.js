@@ -30,6 +30,12 @@ import the_great_mothers from './images/organizations/the-great-mothers.jpeg';
 import the_eye_of_sion from './images/vehicles/the-eye-of-sion.jpeg';
 import the_ghost from './images/vehicles/the-ghost.jpeg';
 import vesper from './images/vehicles/vesper.jpeg';
+import the_dawnbringer from './images/vehicles/the_dawnbringer.jpeg';
+import shin_hatis_ship from './images/vehicles/shin_hatis_ship.jpeg';
+import phantom_ii from './images/vehicles/phantom_ii.jpeg';
+import nr_x_wings from './images/vehicles/nr_x_wings.jpeg';
+import marrok_ship from './images/vehicles/marrok_ship.jpeg';
+import home_one from './images/vehicles/home_one.jpeg';
 
 // weapons_and_tech
 import bokken_sabers from './images/weapons_and_tech/bokken-sabers.jpeg';
@@ -160,7 +166,37 @@ const vehicles = [
         name: 'VESPER',
         image: vesper,
         about: 'Built after the fall of the Empire, the Vesper is a shining example of the New Republic fleet, a sleek and sophisticated vessel built for diplomacy and exploration, not war. With a crew led by Captain Hayle, a veteran of the Galactic Civil War who fought on the side of the Rebel Alliance, the Vesper was tasked with transporting political prisoner Morgan Elsbeth for trial before it came under attack by two mercenaries, posing as Jedi and looking to free the captive.'
-    },  
+    },
+    {
+        name: 'THE DAWNBRINGER',
+        image: the_dawnbringer,
+        about: 'A sister ship to the Vesper, the Dawnbringer was built at the start of the New Republic, part of a new fleet built for defense. With a crew led by Captain Girard, the Dawnbringer is tasked with fetching General Hera Syndulla from the Denab system after she and a small group of X-wing pilots disobey orders.'
+    },
+    {
+        name: "SHIN HATI'S FIEND FIGHTER",
+        image: shin_hatis_ship,
+        about: "The RP82 Fiend fighters of Morgan Elsbeth's mercenaries are compact, high performance assault craft. In addition to her dueling skills, Shin Hati is talented in starship combat."
+    },
+    {
+        name: 'PHANTOM II',
+        image: phantom_ii,
+        about: 'A repurposed Neimoidian Sheathipede-class shuttle, the Phantom II is an auxiliary vessel nested in the hull of the Ghost freighter, used for short-range travel.'
+    },
+    {
+        name: 'NEW REPUBLIC X-WINGS',
+        image: nr_x_wings,
+        about: 'The venerable Incom T-65 design continues to serve proudly in the fleets of the new Republic, as the preeminent space superiority craft of the Rebel Alliance now becomes the signature ship of security patrols.'
+    },
+    {
+        name: "MARROK'S FIEND FIGHTER",
+        image: marrok_ship,
+        about: ""
+    },
+    {
+        name: 'HOME ONE',
+        image: home_one,
+        about: 'HOnce the headquarters of the Rebel Alliance fleet during the storied Battle of Endor, the frigate Home One now serves as the flagship of the New Republic Fleet. Originally built as a civilian exploration vessel, the Mon Calamari vessel craft was later retrofitted for military service. In contrast to standard-issue frigates of this model, Home One has been armored with heavy hull plating, triple-strength shields, and extensive offensive weapons. Home One served as Admiral Gial Ackbar’s flagship at the Battle of Endor, withstanding attacks from swarms of Imperial starfighters and witnessing the destruction of the second Death Star.OLD'
+    }                       
 ]
 
 const weapons_and_tech = [
