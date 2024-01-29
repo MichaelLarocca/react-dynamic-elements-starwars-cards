@@ -35,6 +35,10 @@ import vesper from './images/vehicles/vesper.jpeg';
 import bokken_sabers from './images/weapons_and_tech/bokken-sabers.jpeg';
 import history_of_the_galaxy from './images/weapons_and_tech/history-of-the-galaxy.jpeg';
 import imperial_minefield from './images/weapons_and_tech/imperial-minefield.jpeg';
+import sabines_lightsaber from './images/weapons_and_tech/sabines-lightsaber.jpeg';
+import arcana_star_map from './images/weapons_and_tech/arcana_star_map.jpeg';
+import ahsokas_lightsabers from './images/weapons_and_tech/ahsokas_lightsabers.jpeg';
+import lightsaber from './images/weapons_and_tech/lightsaber.jpeg';
 
 const characters = [
     {
@@ -174,7 +178,27 @@ const weapons_and_tech = [
         name: 'IMPERIAL MINEFIELD',
         image: imperial_minefield,
         about: 'Deployed as the first line of defense around proprietary locations, an Imperial minefield can be placed at a hyperspace arrival point to bombard unwanted visitors and alert denizens to their arrival.'
-    }             
+    },
+    {
+        name: 'SABINE’S LIGHTSABER',
+        image: sabines_lightsaber,
+        about: 'Built by the Jedi Padawan Ezra Bridger while he studied under Kanan Jarrus, the green-bladed lightsaber has since become the weapon of Bridger’s longtime friend, Sabine Wren. A student who studied under Ahsoka Tano, Wren has made some custom modifications to its hilt, including a guard to protect her hands from the base of the blade.'
+    },
+    {
+        name: 'ARCANA STAR MAP',
+        image: arcana_star_map,
+        about: 'Beneath the ruins of an ancient temple on Arcana, Ahsoka Tano recovers a delicate star map in the form of a puzzle-like sphere. Once unlocked, the device can reveal a pathway to coordinates in another galaxy, matching the hyperspace migrations of the noble purrgil as well as providing a chance to locate Grand Admiral Thrawn and Ezra Bridger.'
+    },
+    {
+        name: "AHSOKA'S LIGHTSABERS",
+        image: ahsokas_lightsabers,
+        about: 'As a Padawan, Ahsoka Tano used a green-bladed lightsaber, often wielding it in a non-standard reverse grip. Under the tutelage of Anakin Skywalker, Ahsoka became a skilled duelist, and built a second green-bladed lightsaber with a shorter, shoto-style blade. She used this shorter-bladed lightsaber to complement her primary weapon. During her time with the rebellion, Ahsoka used a pair of new lightsabers with white plasma blades.'
+    },
+    {
+        name: 'LIGHTSABER',
+        image: lightsaber,
+        about: 'The lightsaber is the weapon of a Jedi, an elegant weapon of a more civilized age. It can be used to cut through blast doors or enemies alike. Using the Force, a Jedi can predict and deflect incoming blaster bolts, and reflect them.'
+    }                   
 ]
 
 export { characters, creatures, droids, locations, organizations, vehicles, weapons_and_tech };
