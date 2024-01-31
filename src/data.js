@@ -20,11 +20,16 @@ import star_navigator_droid from './images/droids/star-navigator-droid.jpeg';
 import great_mothers_fortress from './images/locations/great-mothers-fortress.jpeg';
 import santhe_shipyard from './images/locations/santhe-shipyard.jpeg';
 import the_far_galaxy from './images/locations/the-far-galaxy.jpeg';
+import lothal_hospital from './images/locations/lothal_hospital.jpeg';
+import lothal_transmitter_tower from './images/locations/lothal_transmitter_tower.jpeg';
+import nightsisters_temple_on_arcana from './images/locations/nightsisters_temple_on_arcana.jpeg';
 
 // Organizations
 import new_republic from './images/organizations/new-republic.jpeg';
 import nightsisters from './images/organizations/nightsisters.jpeg';
 import the_great_mothers from './images/organizations/the-great-mothers.jpeg';
+import night_troopers from './images/organizations/night_troopers.jpeg';
+import bandits_of_peridea from './images/organizations/bandits_of_peridea.jpeg';
 
 // Vehicles
 import the_eye_of_sion from './images/vehicles/the-eye-of-sion.jpeg';
@@ -130,7 +135,22 @@ const locations = [
         name: 'FAR GALAXY',
         image: the_far_galaxy,
         about: 'The far galaxy includes the world of Peridea, a desolate place that was the ancient homeworld of the Nightsisters’ ancestors, the Dathmiri.'
-    }, 
+    },
+    {
+        name: 'Lothal Hospital',
+        image: lothal_hospital,
+        about: 'Medical droids zip through the stark white corridors of a hospital on Lothal, where a variety of ailments — including lightsaber wounds — can be treated.'
+    },
+    {
+        name: 'Lothal Transmitter Tower',
+        image: lothal_transmitter_tower,
+        about: 'Located on Lothal just outside the capital city, the transmitter tower has served many purposes over the years. Once home to the orphan Ezra Bridger, in the age of the New Republic the lookout serves as Sabine Wren’s makeshift quarters.'
+    },
+    {
+        name: 'Nightsisters’ Temple On Arcana',
+        image: nightsisters_temple_on_arcana,
+        about: 'Long ago, the Nightsisters of Dathomir erected a temple on the world of Arcana. Although it fell to ruin over the years, after Ahsoka Tano stole a star map from within its walls, the temple was all-but vaporized in the ensuing battle between the Jedi and the HK enforcer droids acting on behalf of the Nightsister Morgan Elsbeth.'
+    } 
 ]
 
 const organizations = [
@@ -148,7 +168,17 @@ const organizations = [
         name: 'THE GREAT MOTHERS',
         image: the_great_mothers,
         about: 'On the world of Peridea, the three Dathmiri witches — Klothow, Lakesis, and Aktropaw — weave their mysterious majik to help Grand Admiral Thrawn survive in exile.'        
-    } 
+    },
+    {
+        name: 'Night Troopers',
+        image: night_troopers,
+        about: 'Loyal to Grand Admiral Thrawn and inhumanly persistent, the Night Troopers were once stormtroopers now animated by sinister majik of the Great Mothers to become a macabre fighting force.'
+    },    
+    {
+        name: 'Bandits Of Peridea',
+        image: bandits_of_peridea,
+        about: 'Roaming the desolate hills of distant Peridea, armed bandits prey on unprotected caravans, charging atop their howlers to swiftly attack unsuspecting travelers.'
+    }
 ]
 
 const vehicles = [
@@ -195,7 +225,7 @@ const vehicles = [
     {
         name: 'HOME ONE',
         image: home_one,
-        about: 'HOnce the headquarters of the Rebel Alliance fleet during the storied Battle of Endor, the frigate Home One now serves as the flagship of the New Republic Fleet. Originally built as a civilian exploration vessel, the Mon Calamari vessel craft was later retrofitted for military service. In contrast to standard-issue frigates of this model, Home One has been armored with heavy hull plating, triple-strength shields, and extensive offensive weapons. Home One served as Admiral Gial Ackbar’s flagship at the Battle of Endor, withstanding attacks from swarms of Imperial starfighters and witnessing the destruction of the second Death Star.OLD'
+        about: 'Once the headquarters of the Rebel Alliance fleet during the storied Battle of Endor, the frigate Home One now serves as the flagship of the New Republic Fleet. Originally built as a civilian exploration vessel, the Mon Calamari vessel craft was later retrofitted for military service. In contrast to standard-issue frigates of this model, Home One has been armored with heavy hull plating, triple-strength shields, and extensive offensive weapons. Home One served as Admiral Gial Ackbar’s flagship at the Battle of Endor, withstanding attacks from swarms of Imperial starfighters and witnessing the destruction of the second Death Star.OLD'
     }                       
 ]
 
