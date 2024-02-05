@@ -78,6 +78,10 @@ div.navbar-buttons {
   display: none;
 }
 
+div.hamburger-menu {
+  align-self: flex-start;
+}
+
 .hamburger-menu {
   display: flex;
   flex-direction: column;
