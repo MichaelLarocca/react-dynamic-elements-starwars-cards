@@ -25,6 +25,7 @@ button {
   background-color: black;
   color: white;
   font-weight: bold;
+  font-size: xx-large;
 }
 
 button:hover,
@@ -42,6 +43,7 @@ button:focus {
   font-weight: bold;
   color: lightgray;
   margin: 0 5px;
+  font-size: xx-large;
   /* width: 75px; */
 }
 
@@ -257,6 +259,14 @@ div.navbar-buttons {
 
   .dropdown-menu {
     align-items: flex-end;
+  }
+
+  .navbar-buttons {
+    font-size: medium;
+  }
+
+  button {
+    font-size: small;
   }
 
 }
