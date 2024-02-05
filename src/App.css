@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
   background-color: whitesmoke;
   font-family: 'Roboto', sans-serif;
-  min-width: 350px;
+  min-width: 400px;
 }
 
 nav {
@@ -12,7 +12,7 @@ nav {
   color: white;
   height: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-size: 25px;
   font-weight: bolder;
@@ -32,6 +32,7 @@ button:focus {
   background-color: white;
   color: black;
 }
+
 
 .navbar-buttons {
   border: 1px solid lightgray;
@@ -64,6 +65,21 @@ button:focus {
   flex-direction: column;
   align-items: flex-end;
   display: flex;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 25px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .flex {
@@ -201,6 +217,10 @@ button:focus {
 
 
 @media (min-width: 750px) {
+  nav {
+    justify-content: center;
+  }
+
   .large-card {
     flex-direction: row;
   }
@@ -208,4 +228,13 @@ button:focus {
   .large-card img {
     height: 300px;
   }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: block;
+  }
+
 }
