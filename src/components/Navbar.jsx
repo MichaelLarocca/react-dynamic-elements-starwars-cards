@@ -9,7 +9,7 @@ function Navbar ({ categories, setSelectedCategory }) {
 
     return (
         <nav>
-            <HamburgerMenu  className="hamburger-menu" />
+            <HamburgerMenu className="hamburger-menu" categories={categories} setSelectedCategory={setSelectedCategory} />
             <div className='flex-col'>
                 <img src={star_wars_logo} className='logo' /><img src={ahsoka_logo} className='logo ahsoka'  />
                 <div className='flex ctn-navbar'>

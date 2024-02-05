@@ -42,6 +42,7 @@ button:focus {
   font-weight: bold;
   color: lightgray;
   margin: 0 5px;
+  /* width: 75px; */
 }
 
 .navbar-buttons:hover,
@@ -51,6 +52,10 @@ button:focus {
   background: white;
   cursor: pointer;
   box-shadow: 0 0 10px goldenrod, 0 0 5px goldenrod, 0 0 3px goldenrod, 0 0 1px goldenrod;
+}
+
+div.navbar-buttons {
+  background-color: black;
 }
 
 .dropdown-menu {
@@ -63,7 +68,7 @@ button:focus {
   width: 130px;
   z-index: 1;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   display: flex;
 }
 
@@ -80,6 +85,19 @@ button:focus {
   margin: 0 25px;
   padding: 10px;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.hamburger-menu .dropdown-menu {
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+.hamburger-menu .navbar-buttons .dropdown-menu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  z-index: 1;
 }
 
 .flex {
@@ -235,6 +253,10 @@ button:focus {
 
   .desktop-menu {
     display: block;
+  }
+
+  .dropdown-menu {
+    align-items: flex-end;
   }
 
 }
