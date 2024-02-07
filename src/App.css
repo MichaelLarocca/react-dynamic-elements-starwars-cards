@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -44,7 +44,6 @@ button:focus {
   color: lightgray;
   margin: 0 5px;
   font-size: xx-large;
-  /* width: 75px; */
 }
 
 .navbar-buttons:hover,
@@ -187,6 +186,23 @@ div.hamburger-menu {
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+
+  transition: transform 0.05s ease-in-out;
+}
+
+.hamburger-lightsaber.active {
+  transform: rotate(45deg);
+}
+.hamburger-lightsaber-1.active {
+  position: absolute;
+  bottom: 5;
+}
+.hamburger-lightsaber-1.active {
+  transform: rotate(45deg);
+}
+
+.hamburger-lightsaber-2.active {
+  transform: rotate(-45deg);
 }
 
 .lightsaber-saber {
@@ -249,6 +265,305 @@ div.hamburger-menu {
     flex-direction: row;
   }
   
+  .large-card img {
+    height: 300px;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: block;
+  }
+
+  .dropdown-menu {
+    align-items: flex-end;
+    width: 130px;
+  }
+
+  .navbar-buttons {
+    font-size: medium;
+  }
+
+  button {
+    font-size: small;
+  }
+
+} */
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
+  min-width: 400px;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+button {
+  margin: 3px;
+  padding: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+button:hover,
+button:focus {
+  background-color: white;
+  color: black;
+}
+
+.navbar-buttons {
+  border: 1px solid lightgray;
+  position: relative;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: lightgray;
+  margin: 0 5px;
+  font-size: xx-large;
+}
+
+.navbar-buttons:hover,
+.navbar-buttons:focus {
+  border: 1px solid white;
+  color: black;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px goldenrod, 0 0 5px goldenrod, 0 0 3px goldenrod, 0 0 1px goldenrod;
+}
+
+div.navbar-buttons {
+  background-color: black;
+}
+
+.dropdown-menu {
+  position: absolute;
+  margin-top: 6px;
+  margin-left: -25px;
+  padding: 8px;
+  color: white;
+  background-color: black;
+  width: 200px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+div.hamburger-menu {
+  align-self: flex-start;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 25px;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.hamburger-menu .dropdown-menu {
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.hamburger-menu .navbar-buttons .dropdown-menu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 25px;
+  padding: 5px;
+}
+
+.logo.ahsoka {
+  width: 125px;
+}
+
+.small-card-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px; 
+}
+
+.small-card {
+  border: 1px solid rgba(0,0,0,.5);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,.2);
+}
+
+.small-card:hover,
+.small-card:focus { 
+  cursor: pointer;
+}
+
+.small-card img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.large-card {
+  border: 3px solid grey;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+}
+
+.large-card img {
+  height: 100px;
+}
+
+.about {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+.dark-theme {
+  background-color: black;
+  color: white;
+}
+
+.lightsaber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  transition: transform 0.05s ease-in-out;
+}
+
+.hamburger-lightsaber.active {
+  transform: rotate(45deg);
+}
+
+.hamburger-lightsaber-1.active {
+  position: absolute;
+  bottom: 5;
+}
+
+.hamburger-lightsaber-1.active {
+  transform: rotate(45deg);
+}
+
+.hamburger-lightsaber-2.active {
+  transform: rotate(-45deg);
+}
+
+.lightsaber-saber,
+.lightsaber-saber-active {
+  width: 25px;
+  height: 3px;
+  position: relative;
+  border-radius: 50px;
+}
+
+.lightsaber-saber {
+  background-color: grey;
+}
+
+.lightsaber-saber-active {
+  background-color: white;
+}
+
+.lightsaber-saber-hilt,
+.lightsaber-saber-hilt-active {
+  width: 5px;
+  height: 3px;
+  border-radius: 5%;
+  margin-left: 3px;
+}
+
+.lightsaber-saber-hilt {
+  background-color: grey;
+}
+
+.lightsaber-saber-hilt-active {
+  background-color: white;
+}
+
+.lightsaber-saber.glow {
+  box-shadow: 0 0 2px white, 0 0 4px white, 0 0 6px white, 0 0 8px white;
+  animation: glow .01s infinite;
+}
+
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+  }
+  50% {
+    box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white;
+  }
+  100% {
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+  }
+}
+
+
+@media (min-width: 750px) {
+  nav {
+    justify-content: center;
+  }
+
+  .large-card {
+    flex-direction: row;
+  }
+
   .large-card img {
     height: 300px;
   }

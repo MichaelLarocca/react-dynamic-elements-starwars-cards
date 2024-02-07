@@ -19,9 +19,8 @@ export default function HamburgerMenu({ categories, setSelectedCategory }) {
 
     return (
         <div className="hamburger-menu" onClick={handleClick}>
-            <Lightsaber isActive={isActive} />
-            <Lightsaber isActive={isActive} />
-            <Lightsaber isActive={isActive} />
+            <Lightsaber isActive={isActive} className={isActive ? "hamburger-lightsaber-1 active" : "hamburger-lightsaber-1"} />
+            <Lightsaber isActive={isActive} className={isActive ? "hamburger-lightsaber-2 active" : "hamburger-lightsaber-2"} />
             {isActive && (
                 <div className="dropdown-menu">
                     <div className="navbar-buttons">NEWS</div>
