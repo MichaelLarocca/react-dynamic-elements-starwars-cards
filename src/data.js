@@ -23,6 +23,14 @@ import the_far_galaxy from './images/locations/the-far-galaxy.jpeg';
 import lothal_hospital from './images/locations/lothal_hospital.jpeg';
 import lothal_transmitter_tower from './images/locations/lothal_transmitter_tower.jpeg';
 import nightsisters_temple_on_arcana from './images/locations/nightsisters_temple_on_arcana.jpeg';
+import peridia from './images/locations/peridia.jpeg';
+import arcana from  './images/locations/arcana.jpeg';
+import seatos from './images/locations/seatos.jpeg';
+import corellia from './images/locations/corellia.jpeg';
+import world_between_worlds from './images/locations/world_between_worlds.jpeg';
+import lothal from './images/locations/lothal.jpeg';
+import dathomir from './images/locations/dathomir.jpeg';
+import coruscant from './images/locations/coruscant.jpeg';
 
 // Organizations
 import new_republic from './images/organizations/new-republic.jpeg';
@@ -150,6 +158,46 @@ const locations = [
         name: 'Nightsisters’ Temple On Arcana',
         image: nightsisters_temple_on_arcana,
         about: 'Long ago, the Nightsisters of Dathomir erected a temple on the world of Arcana. Although it fell to ruin over the years, after Ahsoka Tano stole a star map from within its walls, the temple was all-but vaporized in the ensuing battle between the Jedi and the HK enforcer droids acting on behalf of the Nightsister Morgan Elsbeth.'
+    },
+    {
+        name: 'Peridea',
+        image: peridia,
+        about: 'An ancient world, Peridea is the home of the Dathomirian ancestors in the far galaxy. It is a world spoken of in fragmented records in the Jedi Archives, which describes it as the terminus of a migration route for pods of purrgil traversing the void between galaxies. And it is here that Ezra Bridger and Grand Admiral Thrawn have been exiled.'
+    },
+    {
+        name: 'Arcana',
+        image: arcana,
+        about: 'Arcana is an ancient world marked by crumbling ruins. Within its forgotten subterranean chambers are secrets from a long-ago age and clues to the mystery surrounding the disappearance of Grand Admiral Thrawn and Ezra Bridger.'
+    },
+    {
+        name: 'Seatos',
+        image: seatos,
+        about: 'The world of Seatos boasts a lush landscape dominated by red forests and vast oceans. Along one coastal outcropping, a cliffside henge has been erected as a reflex point to uncover the secrets of an ancient star map.'
+    },
+    {
+        name: 'Corellia',
+        image: corellia,
+        about: 'An ancient world in the galactic Core, Corellia is known for its people’s wanderlust and its massive shipyards. Corellia played a key role in the expansion of galactic civilization, but that was thousands of years ago. It’s now a faded industrial planet exploited by the Empire to build TIE fighters and Star Destroyers, while its formidable dockyard facilities are retrofitted to destroy all evidence of the Separatist forces. Corellians not born with money or influence hope to escape their homeworld in search of a better life.'
+    },
+    {
+        name: 'World Between Worlds',
+        image: world_between_worlds,
+        about: `Behind the ancient painting of the Mortis gods on the Lothal Jedi Temple is a world between worlds -- a collections of pathways and doors between time and space. Uncovered by the Empire, the Emperor sought entrance, as access would grant him unimaginable power. But the Padawan, Ezra Bridger, found the key to unlocking the world between worlds first, and would ultimately thwart Palpatine's plans.`
+    },
+    {
+        name: 'Lothal',
+        image: lothal,
+        about: 'Lothal is a diverse planet, with both farmland and a city center. During the age of the Empire, it fell under Imperial occupation, as farmers were kicked off their land and enormous TIE fighter and weapons factories were built. While most of the population felt powerless in the face of Imperial rule, a select few dared to fight back.'
+    },
+    {
+        name: 'Dathomir',
+        image: dathomir,
+        about: 'A remote planet, Dathomir is drenched in blood-red light from its central star. The planet has continents overrun by twisted vegetation, with forests of bent trees burdened by large, cocoon-like fruit. Bordering dense swamplands is the massive stone fortresses of the Nightsisters, a witch clan. The Nightsisters kept to themselves, but had on occasion been known to offer their services to those who piqued their interests. Far from the Nightsisters lived the Nightbrothers -- a tattooed clan of Zabrak warriors were subservient to their female counterparts.'
+    },
+    {
+        name: 'Coruscant',
+        image: coruscant,
+        about: 'Coruscant is the vibrant heart and capital of the galaxy during the age of the Empire, featuring a diverse mix of cultures and citizens spread over hundreds of levels. Once the home of the main Jedi Temple -- the central hub of Jedi training and learning for over a thousand generations and the repository of the Jedi Archives -- these traditions ended when the planet bore witness to Order 66.'
     } 
 ]
 
