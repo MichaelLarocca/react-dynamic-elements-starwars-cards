@@ -315,4 +315,19 @@ const weapons_and_tech = [
     }                   
 ]
 
-export { characters, creatures, droids, locations, organizations, vehicles, weapons_and_tech };
+const youtube = [
+    {
+        name: 'Ahsoka Tano',
+        image: ahsoka,
+        about: 'Former Jedi Knight Ahsoka Tano once served as the Padawan learner to Jedi Anakin Skywalker during the Clone Wars. A respected leader and warrior attuned to the light side of the Force, Ahsoka grew into a formidable fighter before the Empire’s reign changed the course of galactic history. Although she walked away from the Jedi Order, she continued to stand up for those fighting for peace and justice in the galaxy long after the fall of the Republic.',
+        youtubeId: 'U5yRu7UKwfc'
+    },
+    {
+        name: 'Anakin Skywalker',
+        image: anakin_skywalker,
+        about: "Discovered as a slave on Tatooine by Qui-Gon Jinn and Obi-Wan Kenobi, Anakin Skywalker had the potential to become one of the most powerful Jedi ever. Some even believed he was the prophesied Chosen One who would bring balance to the Force. Always pushing the limits of his Jedi training, seeking to excel and live up to his reputation, Skywalker's passion often brought him into conflict with his mentor, Jedi Master Obi-Wan Kenobi. A hero of the Clone Wars, Anakin was caring and compassionate, but suffered from a deep fear of loss that would prove to be his downfall.",
+        youtubeId: 'U5yRu7UKwfc'
+    },
+]
+
+export { characters, creatures, droids, locations, organizations, vehicles, weapons_and_tech, youtube };

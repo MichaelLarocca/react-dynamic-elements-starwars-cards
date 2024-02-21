@@ -3,7 +3,8 @@ export default function Menu({ setSelectedCategory, categories }) {
         <menu>
             {Object.keys(categories).map(category => (
                 <button key={category} onClick={() => setSelectedCategory(categories[category])}>
-                    {category.charAt(0).toUpperCase() + category.slice(1)}
+                    {/* {category.charAt(0).toUpperCase() + category.slice(1)} */}
+                    {category === 'youtube' ? 'VIDEO' : category.charAt(0).toUpperCase() + category.slice(1)}
                 </button>
             ))}            
         </menu>

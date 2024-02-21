@@ -7,6 +7,10 @@ import HamburgerMenu from './HamburgerMenu';
 function Navbar ({ categories, setSelectedCategory }) {
     const [isDatabankVisible, setDatabankVisible] = useState(false);
 
+    const handleVideoClick = () => {
+        setSelectedCategory(categories.youtube);
+    }
+
     return (
         <nav>
             <HamburgerMenu className="hamburger-menu" categories={categories} setSelectedCategory={setSelectedCategory} />
@@ -15,7 +19,7 @@ function Navbar ({ categories, setSelectedCategory }) {
                 <div className='flex ctn-navbar'>
                     <div className="navbar-buttons desktop-menu">NEWS</div>
                     <div className="navbar-buttons desktop-menu">FEATURES</div>
-                    <div className="navbar-buttons desktop-menu">VIDEO</div>
+                    <div className="navbar-buttons desktop-menu" onClick={handleVideoClick}>VIDEO</div>
                     
                     <div className="navbar-buttons desktop-menu" onMouseEnter={() => setDatabankVisible(true)} onMouseLeave={() => setDatabankVisible(false)}>
                         DATABANK
