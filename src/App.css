@@ -541,6 +541,13 @@ div.hamburger-menu {
   animation: glow .01s infinite;
 }
 
+.ctn-youtube{
+  width: 100%;
+}
+
+.youtube iframe {
+  width: 100%;
+}
 
 @keyframes glow {
   0% {
@@ -554,6 +561,11 @@ div.hamburger-menu {
   }
 }
 
+@media (min-width:500px) and (max-width: 650px) {
+  .youtube iframe {
+    /* width: 475px; */
+  } 
+}
 
 @media (min-width: 750px) {
   nav {
@@ -567,6 +579,14 @@ div.hamburger-menu {
   .large-card img {
     height: 300px;
   }
+
+  .ctn-youtube{
+    width: 100%;
+  }
+
+  .youtube iframe {
+    min-width: 500px;
+  } 
 
   .hamburger-menu {
     display: none;
