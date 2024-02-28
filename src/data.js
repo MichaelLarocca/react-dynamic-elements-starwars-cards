@@ -59,6 +59,11 @@ import arcana_star_map from './images/weapons_and_tech/arcana_star_map.jpeg';
 import ahsokas_lightsabers from './images/weapons_and_tech/ahsokas_lightsabers.jpeg';
 import lightsaber from './images/weapons_and_tech/lightsaber.jpeg';
 
+// YouTube
+import RebelCrewFeaturette from './images/youtube/RebelCrewFeaturette.jpg';
+import AnakinAndAhsokasReunion from './images/youtube/AnakinAndAhsokasReunion.jpg';
+import Fan_Event_Ahsoka from './images/youtube/Fan_Event_Ahsoka.jpeg';
+
 const characters = [
     {
         name: 'Admiral Ackbar',
@@ -318,16 +323,28 @@ const weapons_and_tech = [
 const youtube = [
     {
         name: 'Ahsoka Tano',
-        image: ahsoka,
-        about: 'Former Jedi Knight Ahsoka Tano once served as the Padawan learner to Jedi Anakin Skywalker during the Clone Wars. A respected leader and warrior attuned to the light side of the Force, Ahsoka grew into a formidable fighter before the Empire’s reign changed the course of galactic history. Although she walked away from the Jedi Order, she continued to stand up for those fighting for peace and justice in the galaxy long after the fall of the Republic.',
+        image: RebelCrewFeaturette,
+        about: `“This is provocative, exciting, and fun. I can’t wait for people to watch it.” - Rosario Dawson. Stream the first two episodes of #Ahsoka, a Star Wars Original series, now only on Disney+.`,
+        youtubeId: 'NvnNl9s9aCk'
+    },
+    {
+        name: 'Anakin & Ahsoka’s Reunion',
+        image: AnakinAndAhsokasReunion,
+        about: `Join Rosario Dawson and Hayden Christensen as they go behind the scenes of Ahsoka and Anakin's reunion. Episode 5 of #Ahsoka is now streaming on Disney+ with new episodes on Tuesdays at 6PM PT.`,
         youtubeId: 'U5yRu7UKwfc'
     },
     {
-        name: 'Anakin Skywalker',
-        image: anakin_skywalker,
-        about: "Discovered as a slave on Tatooine by Qui-Gon Jinn and Obi-Wan Kenobi, Anakin Skywalker had the potential to become one of the most powerful Jedi ever. Some even believed he was the prophesied Chosen One who would bring balance to the Force. Always pushing the limits of his Jedi training, seeking to excel and live up to his reputation, Skywalker's passion often brought him into conflict with his mentor, Jedi Master Obi-Wan Kenobi. A hero of the Clone Wars, Anakin was caring and compassionate, but suffered from a deep fear of loss that would prove to be his downfall.",
-        youtubeId: 'U5yRu7UKwfc'
+        name: 'Fan Event',
+        image: Fan_Event_Ahsoka,
+        about: `Thank you to all the fans who celebrated with us at our Ahsoka fan events around the world on August 17, 2023! Because you’re the best fans in the galaxy, we’re excited to announce that new episodes of #Ahsoka will now launch Tuesdays at 6PM PT, starting with our two-episode premiere on August 22, only on Disney+.`,
+        youtubeId: 'kjL_KhKuXBg'
     },
+    // {
+    //     name: 'HOLD',
+    //     image: HOLD,
+    //     about: `HOLD`,
+    //     youtubeId: 'HOLD'
+    // }
 ]
 
 export { characters, creatures, droids, locations, organizations, vehicles, weapons_and_tech, youtube };
