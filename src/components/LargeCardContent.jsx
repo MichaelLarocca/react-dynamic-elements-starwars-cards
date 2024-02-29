@@ -4,7 +4,7 @@ import Lightsaber from './Lightsaber';
 function LargeCardContent({name, image, about, isSelected, youtubeId}) {
     return (
         <div className="large-card">
-            <div className="ctn-youtube">
+            <div className={youtubeId ? "ctn-youtube": null}>
                 {!youtubeId && <img src={image} alt={name}></img>}
                 {youtubeId && <YouTube videoId={youtubeId} className='youtube'/>}
             </div>
