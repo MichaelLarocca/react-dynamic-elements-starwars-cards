@@ -3,13 +3,10 @@ import star_wars_logo from '../images/miscellaneous/star-wars-logo.png';
 import ahsoka_logo from '../images/miscellaneous/ahsoka-logo.png';
 import Menu from './Menu';
 import HamburgerMenu from './HamburgerMenu';
+import handleVideoClick from '../utils/helpers';
 
 function Navbar ({ categories, setSelectedCategory }) {
     const [isDatabankVisible, setDatabankVisible] = useState(false);
-
-    const handleVideoClick = () => {
-        setSelectedCategory(categories.youtube);
-    }
 
     return (
         <nav>
@@ -19,8 +16,7 @@ function Navbar ({ categories, setSelectedCategory }) {
                 <div className='flex ctn-navbar'>
                     <div className="navbar-buttons desktop-menu">NEWS</div>
                     <div className="navbar-buttons desktop-menu">FEATURES</div>
-                    <div className="navbar-buttons desktop-menu" onClick={handleVideoClick}>VIDEO</div>
-                    
+                    <div className="navbar-buttons desktop-menu" onClick={() => handleVideoClick({ categories, setSelectedCategory })}>VIDEO</div>
                     <div className="navbar-buttons desktop-menu" onMouseEnter={() => setDatabankVisible(true)} onMouseLeave={() => setDatabankVisible(false)}>
                         DATABANK
                         {isDatabankVisible && (
