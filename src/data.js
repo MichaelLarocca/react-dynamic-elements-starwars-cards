@@ -64,6 +64,26 @@ import RebelCrewFeaturette from './images/youtube/RebelCrewFeaturette.jpg';
 import AnakinAndAhsokasReunion from './images/youtube/AnakinAndAhsokasReunion.jpg';
 import Fan_Event_Ahsoka from './images/youtube/Fan_Event_Ahsoka.jpeg';
 
+// Carousel
+import character_gallery from './images/carousel/character_gallery.jpeg';
+import poster_gallery from './images/carousel/poster_gallery.jpeg';
+import stills_gallery from './images/carousel/stills_gallery.jpeg';
+
+// Carousel Character
+import baylan from './images/carousel/character/baylan.jpeg';
+import c3po from './images/carousel/character/c3po.jpeg';
+import carousel_ezra from './images/carousel/character/carousel_ezra.jpeg';
+
+// Carousel Poster
+import ahosoka_key_art from './images/carousel/poster/ahosoka_key_art.jpeg';
+import ahsoka_poster from './images/carousel/poster/ahsoka_poster.jpeg';
+import barkla_1 from './images/carousel/poster/barkla_1.jpeg';
+
+// Carousel Stills
+import stills_01 from './images/carousel/stills/stills_01.jpeg';
+import stills_02 from './images/carousel/stills/stills_02.jpeg';
+import stills_03 from './images/carousel/stills/stills_03.jpeg';
+
 const characters = [
     {
         name: 'Admiral Ackbar',
