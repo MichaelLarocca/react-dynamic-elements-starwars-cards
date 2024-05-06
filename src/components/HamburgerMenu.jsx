@@ -67,6 +67,7 @@ export default function HamburgerMenu({
 						{isDatabankVisible && (
 							<Menu
 								setSelectedCategory={setSelectedCategory}
+								setShowCarousel={setShowCarousel}
 								categories={categories}
 							/>
 						)}
