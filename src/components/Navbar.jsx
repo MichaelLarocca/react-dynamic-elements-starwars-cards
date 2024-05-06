@@ -22,15 +22,18 @@ function Navbar({ categories, setSelectedCategory, setShowCarousel }) {
 					<div className="navbar-buttons desktop-menu">NEWS</div>
 					<div
 						className="navbar-buttons desktop-menu"
-						onClick={() => setShowCarousel((prev) => !prev)}
+						onClick={() => {
+							setShowCarousel((prev) => !prev);
+						}}
 					>
 						FEATURES
 					</div>
 					<div
 						className="navbar-buttons desktop-menu"
-						onClick={() =>
-							handleVideoClick({ categories, setSelectedCategory })
-						}
+						onClick={() => {
+							handleVideoClick({ categories, setSelectedCategory });
+							setShowCarousel(false);
+						}}
 					>
 						VIDEO
 					</div>
@@ -44,6 +47,7 @@ function Navbar({ categories, setSelectedCategory, setShowCarousel }) {
 							<div className="dropdown-menu">
 								<Menu
 									setSelectedCategory={setSelectedCategory}
+									setShowCarousel={setShowCarousel}
 									categories={categories}
 								/>
 							</div>

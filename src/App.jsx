@@ -47,28 +47,34 @@ function App() {
 				setSelectedCategory={setSelectedCategory}
 				setShowCarousel={setShowCarousel}
 			/>
-			<section className="small-card-container">
-				{mapItems(
-					selectedCategory,
-					StarWarsCard,
-					setSelectedItem,
-					selectedItem,
-					SmallCardContent
-				)}
-			</section>
-			<StarWarsCard
-				type="article"
-				contentType={LargeCardContent}
-				contentProps={{
-					name: selectedItem ? selectedItem.name : items[0].name,
-					image: selectedItem ? selectedItem.image : items[0].image,
-					about: selectedItem ? selectedItem.about : items[0].about,
-					youtubeId: selectedItem ? selectedItem.youtubeId : items[0].youtubeId,
-				}}
-				layout="large-card"
-				theme="dark-theme"
-				interaction="hoverable"
-			/>
+			{!showCarousel && (
+				<section className="small-card-container">
+					{mapItems(
+						selectedCategory,
+						StarWarsCard,
+						setSelectedItem,
+						selectedItem,
+						SmallCardContent
+					)}
+				</section>
+			)}
+			{!showCarousel && (
+				<StarWarsCard
+					type="article"
+					contentType={LargeCardContent}
+					contentProps={{
+						name: selectedItem ? selectedItem.name : items[0].name,
+						image: selectedItem ? selectedItem.image : items[0].image,
+						about: selectedItem ? selectedItem.about : items[0].about,
+						youtubeId: selectedItem
+							? selectedItem.youtubeId
+							: items[0].youtubeId,
+					}}
+					layout="large-card"
+					theme="dark-theme"
+					interaction="hoverable"
+				/>
+			)}
 			{showCarousel && (
 				<Carousel>
 					<div>
