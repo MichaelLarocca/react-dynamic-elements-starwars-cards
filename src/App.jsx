@@ -77,18 +77,12 @@ function App() {
 			)}
 			{showCarousel && (
 				<Carousel>
-					<div>
-						<img src={carousel_character[0].image} />
-						<p className="legend">{carousel_character[0].name}</p>
-					</div>
-					<div>
-						<img src={carousel_character[1].image} />
-						<p className="legend">{carousel_character[1].name}</p>
-					</div>
-					<div>
-						<img src={carousel_character[2].image} />
-						<p className="legend">{carousel_character[2].name}</p>
-					</div>
+					{carousel_character.map((character) => (
+						<div key={character.name}>
+							<img src={character.image} />
+							<p className="legend">{character.name}</p>
+						</div>
+        			))}
 				</Carousel>
 			)}
 		</>

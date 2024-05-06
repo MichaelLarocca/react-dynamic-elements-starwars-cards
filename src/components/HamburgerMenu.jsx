@@ -47,7 +47,7 @@ export default function HamburgerMenu({
 						className="navbar-buttons"
 						onClick={() => setShowCarousel((prev) => !prev)}
 					>
-						FEATURES
+						GALLERY
 					</div>
 					<div
 						className="navbar-buttons"

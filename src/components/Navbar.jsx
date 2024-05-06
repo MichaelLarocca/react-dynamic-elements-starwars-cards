@@ -27,7 +27,7 @@ function Navbar({ categories, setSelectedCategory, setShowCarousel }) {
 							setShowCarousel((prev) => !prev);
 						}}
 					>
-						FEATURES
+						GALLERY
 					</div>
 					<div
 						className="navbar-buttons desktop-menu"
