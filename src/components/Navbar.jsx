@@ -14,6 +14,7 @@ function Navbar({ categories, setSelectedCategory, setShowCarousel }) {
 				className="hamburger-menu"
 				categories={categories}
 				setSelectedCategory={setSelectedCategory}
+				setShowCarousel={setShowCarousel}
 			/>
 			<div className="flex-col">
 				<img src={star_wars_logo} className="logo" />
