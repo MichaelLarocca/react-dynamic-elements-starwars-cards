@@ -3,10 +3,12 @@ import star_wars_logo from "../images/miscellaneous/star-wars-logo.png";
 import ahsoka_logo from "../images/miscellaneous/ahsoka-logo.png";
 import Menu from "./Menu";
 import HamburgerMenu from "./HamburgerMenu";
+import CarouselMenu from "./CarouselMenu";
 import handleVideoClick from "../utils/helpers";
 
-function Navbar({ categories, setSelectedCategory, setShowCarousel }) {
+function Navbar({ categories, setSelectedCategory, setShowCarousel, carousel }) {
 	const [isDatabankVisible, setDatabankVisible] = useState(false);
+	const [isGalleryVisible, setGalleryVisible] = useState(false);
 
 	return (
 		<nav>
@@ -23,11 +25,19 @@ function Navbar({ categories, setSelectedCategory, setShowCarousel }) {
 					<div className="navbar-buttons desktop-menu">NEWS</div>
 					<div
 						className="navbar-buttons desktop-menu"
-						onClick={() => {
-							setShowCarousel((prev) => !prev);
-						}}
+						onMouseEnter={() => setGalleryVisible(true)}
+						onMouseLeave={() => setGalleryVisible(false)}
 					>
 						GALLERY
+						{isGalleryVisible && (
+							<div className="dropdown-menu">
+								<CarouselMenu
+									setSelectedCategory={setSelectedCategory}
+									setShowCarousel={setShowCarousel}
+									carousel={carousel}
+								/>
+							</div>
+						)}
 					</div>
 					<div
 						className="navbar-buttons desktop-menu"

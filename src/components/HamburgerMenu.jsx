@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Lightsaber from "./Lightsaber";
 import Menu from "./Menu";
+import CarouselMenu from "./CarouselMenu";
 import handleVideoClick from "../utils/helpers";
 
 export default function HamburgerMenu({
@@ -10,10 +11,18 @@ export default function HamburgerMenu({
 }) {
 	const [isActive, setIsActive] = useState(false);
 	const [isDatabankVisible, setDatabankVisible] = useState(false);
+	const [isCarouselVisible, setCarouselVisible] = useState(false);
 
 	useEffect(() => {
 		if (isActive) {
 			setDatabankVisible(false);
+		}
+	}, [isActive]);
+
+	useEffect(() => {
+		if (isActive) {
+			setDatabankVisible(false);
+			setCarouselVisible(false); // This will close the Carousel menu when the hamburger menu is toggled
 		}
 	}, [isActive]);
 
@@ -43,11 +52,24 @@ export default function HamburgerMenu({
 				<div className="dropdown-menu">
 					<div className="navbar-buttons">NEWS</div>
 					{/* <div className="navbar-buttons">FEATURES</div> */}
-					<div
+					{/* <div
 						className="navbar-buttons"
 						onClick={() => setShowCarousel((prev) => !prev)}
 					>
 						GALLERY
+					</div> */}
+					<div
+						className="navbar-buttons"
+						onMouseEnter={() => setCarouselVisible(true)}
+						onMouseLeave={() => setCarouselVisible(false)}
+					>
+						GALLERY
+						{isCarouselVisible && (
+							<CarouselMenu
+								setSelectedCategory={setSelectedCategory}
+								setShowCarousel={setShowCarousel}
+							/>
+						)}
 					</div>
 					<div
 						className="navbar-buttons"

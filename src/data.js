@@ -412,11 +412,17 @@ const youtube = [
 	// }
 ];
 
-const carousel = [
-	{ image: character_gallery, name: "Character Gallery" },
-	{ image: poster_gallery, name: "Poster Gallery" },
-	{ image: stills_gallery, name: "Stills Gallery" },
-];
+// const carousel = [
+// 	{ image: character_gallery, name: "Character Gallery" },
+// 	{ image: poster_gallery, name: "Poster Gallery" },
+// 	{ image: stills_gallery, name: "Stills Gallery" },
+// ];
+
+const carousel = {
+	character: 'Character Gallery',
+	poster: 'Poster Gallery',
+	stills: 'Stills Gallery'
+};
 
 const carousel_character = [
 	{ image: baylan, name: "Baylan Skoll" },
