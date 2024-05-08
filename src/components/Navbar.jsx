@@ -30,7 +30,7 @@ function Navbar({ categories, setSelectedCategory, setShowCarousel, carousel }) 
 					>
 						GALLERY
 						{isGalleryVisible && (
-							<div className="dropdown-menu">
+							<div className="dropdown-menu dropdown-menu-carousel">
 								<CarouselMenu
 									setSelectedCategory={setSelectedCategory}
 									setShowCarousel={setShowCarousel}

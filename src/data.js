@@ -93,14 +93,34 @@ import shin from "./images/carousel/character/shin.jpeg";
 import thrawn from "./images/carousel/character/thrawn.jpeg";
 
 // Carousel Poster
-import ahosoka_key_art from "./images/carousel/poster/ahosoka_key_art.jpeg";
 import ahsoka_poster from "./images/carousel/poster/ahsoka_poster.jpeg";
 import barkla_1 from "./images/carousel/poster/barkla_1.jpeg";
+import characterseries_digital_compiliation from "./images/carousel/poster/characterseries_digital_compilation.jpeg";
+import munoz_1 from "./images/carousel/poster/munoz_1.jpeg";
+import munoz_2 from "./images/carousel/poster/munoz_2.jpeg";
+import munoz_3 from "./images/carousel/poster/munoz_3.jpeg";
+import munoz_4 from "./images/carousel/poster/munoz_4.jpeg";
+import munoz_5 from "./images/carousel/poster/munoz_5.jpeg";
+import munoz_6 from "./images/carousel/poster/munoz_6.jpeg";
+import munoz_7 from "./images/carousel/poster/munoz_7.jpeg";
+import poster_posse_ahsoka_01 from "./images/carousel/poster/poster_posse_ahsoka_01.jpeg";
+import taylor_1 from "./images/carousel/poster/taylor_1.jpeg";
 
 // Carousel Stills
 import stills_01 from "./images/carousel/stills/stills_01.jpeg";
 import stills_02 from "./images/carousel/stills/stills_02.jpeg";
 import stills_03 from "./images/carousel/stills/stills_03.jpeg";
+import stills_04 from "./images/carousel/stills/stills_04.jpeg";
+import stills_05 from "./images/carousel/stills/stills_05.jpeg";
+import stills_06 from "./images/carousel/stills/stills_06.jpeg";
+import stills_07 from "./images/carousel/stills/stills_07.jpeg";
+import stills_08 from "./images/carousel/stills/stills_08.jpeg";
+import stills_09 from "./images/carousel/stills/stills_09.jpeg";
+import stills_10 from "./images/carousel/stills/stills_10.jpeg";
+import stills_11 from "./images/carousel/stills/stills_11.jpeg";
+import stills_12 from "./images/carousel/stills/stills_12.jpeg";
+import stills_13 from "./images/carousel/stills/stills_13.jpeg";
+import stills_14 from "./images/carousel/stills/stills_14.jpeg";
 
 const characters = [
 	{
@@ -467,14 +487,34 @@ const carousel_character = [
 ];
 
 const carousel_poster = [
-	{ image: ahosoka_key_art, name: "Ahsoka Tano" },
-	{ image: ahsoka_poster, name: "Ahsoka Tano" },
-	{ image: barkla_1, name: "Baylan Skoll" },
+	{ image: ahsoka_poster, name: "Poster 01" },
+	{ image: barkla_1, name: "Poster 02" },
+	{ image: characterseries_digital_compiliation, name: "Poster 03" },
+	{ image: munoz_1, name: "Poster 04" },
+	{ image: munoz_2, name: "Poster 05" },
+	{ image: munoz_3, name: "Poster 06" },
+	{ image: munoz_4, name: "Poster 07" },
+	{ image: munoz_5, name: "Poster 08" },
+	{ image: munoz_6, name: "Poster 09" },
+	{ image: munoz_7, name: "Poster 10" },
+	{ image: poster_posse_ahsoka_01, name: " Poster 11" },
+	{ image: taylor_1, name: "Poster 12" },
 ];
 const carousel_stills = [
-	{ image: stills_01, name: "Ahsoka Tano" },
-	{ image: stills_02, name: "Ahsoka Tano" },
-	{ image: stills_03, name: "Baylan Skoll" },
+	{ image: stills_01, name: "Stills 01" },
+	{ image: stills_02, name: "Stills 02" },
+	{ image: stills_03, name: "Stills 03" },
+	{ image: stills_04, name: "Stills 04" },
+	{ image: stills_05, name: "Stills 05" },
+	{ image: stills_06, name: "Stills 06" },
+	{ image: stills_07, name: "Stills 07" },
+	{ image: stills_08, name: "Stills 08" },
+	{ image: stills_09, name: "Stills 09" },
+	{ image: stills_10, name: "Stills 10" },
+	{ image: stills_11, name: "Stills 11" },
+	{ image: stills_12, name: "Stills 12" },
+	{ image: stills_13, name: "Stills 13" },
+	{ image: stills_14, name: "Stills 14" },
 ];
 
 export {

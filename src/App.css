@@ -67,11 +67,15 @@ div.navbar-buttons {
 	color: white;
 	background-color: black;
 	width: 200px;
-	z-index: 1;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	z-index: 2;
+}
+
+.dropdown-menu.dropdown-menu-carousel {
+	margin-left: -10px;
+	width: 65px;
 }
 
 .desktop-menu {
