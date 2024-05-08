@@ -269,16 +269,7 @@ div.hamburger-menu {
 }
 
 .carousel {
-	z-index: -1;
-}
-
-.carousel .thumbs {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index: 2;
-	display: flex;
-	justify-content: center;
+	z-index: 0;
 }
 
 .carousel .slide {
@@ -286,9 +277,8 @@ div.hamburger-menu {
 }
 
 .carousel .slide img {
-	height: 100%;
-	width: auto;
-	object-fit: contain;
+	max-height: 350px;
+	object-fit: contain; 
 }
 
 @media (min-width: 750px) {

@@ -73,6 +73,24 @@ import stills_gallery from "./images/carousel/stills_gallery.jpeg";
 import baylan from "./images/carousel/character/baylan.jpeg";
 import c3po from "./images/carousel/character/c3po.jpeg";
 import carousel_ezra from "./images/carousel/character/carousel_ezra.jpeg";
+import carousel_hera from "./images/carousel/character/carousel_hera.jpeg";
+import carousel_jason from "./images/carousel/character/carousel_jason.jpeg";
+import carousel_loth_cat from "./images/carousel/character/carousel_loth_cat.jpeg";
+import carousel_sabine from "./images/carousel/character/carousel_sabine.jpeg";
+import carson_teva from "./images/carousel/character/carson_teva.jpeg";
+import chopper from "./images/carousel/character/chopper.jpeg";
+import clone_wars_ahsoka from "./images/carousel/character/clone_wars_ahsoka.jpeg";
+import clone_wars_anakin from "./images/carousel/character/clone_wars_anakin.jpeg";
+import enoch from "./images/carousel/character/enoch.jpeg";
+import huyang from "./images/carousel/character/huyang.jpeg";
+import lady_morgan from "./images/carousel/character/lady_morgan.jpeg";
+import marrok from "./images/carousel/character/marrok.jpeg";
+import mon_mothma from "./images/carousel/character/mon_mothma.jpeg";
+import posters_nightsisters from "./images/carousel/character/posters_nightsisters.jpeg";
+import posters_ahsoka from "./images/carousel/character/posters_ahsoka.jpeg";
+import rex from "./images/carousel/character/rex.jpeg";
+import shin from "./images/carousel/character/shin.jpeg";
+import thrawn from "./images/carousel/character/thrawn.jpeg";
 
 // Carousel Poster
 import ahosoka_key_art from "./images/carousel/poster/ahosoka_key_art.jpeg";
@@ -428,6 +446,35 @@ const carousel_character = [
 	{ image: baylan, name: "Baylan Skoll" },
 	{ image: c3po, name: "C3PO" },
 	{ image: carousel_ezra, name: "Ezra Bridger" },
+	{ image: carousel_hera, name: "Hera Syndulla" },
+	{ image: carousel_jason, name: "Jason Voorhees" },
+	{ image: carousel_loth_cat, name: "Loth-cat" },
+	{ image: carousel_sabine, name: "Sabine Wren" },
+	{ image: carson_teva, name: "Carson Tevan" },
+	{ image: chopper, name: "Chopper" },
+	{ image: clone_wars_ahsoka, name: "Ahsoka Tano" },
+	{ image: clone_wars_anakin, name: "Anakin Skywalker" },
+	{ image: enoch, name: "Enoch" },
+	{ image: huyang, name: "Huyang" },
+	{ image: lady_morgan, name: "Lady Morgan" },
+	{ image: marrok, name: "Marrok" },
+	{ image: mon_mothma, name: "Mon Mothma" },
+	{ image: posters_nightsisters, name: "Nightsisters" },
+	{ image: posters_ahsoka, name: "Ahsoka Tano" },
+	{ image: rex, name: "Rex" },
+	{ image: shin, name: "Shin" },
+	{ image: thrawn, name: "Thrawn" },
+];
+
+const carousel_poster = [
+	{ image: ahosoka_key_art, name: "Ahsoka Tano" },
+	{ image: ahsoka_poster, name: "Ahsoka Tano" },
+	{ image: barkla_1, name: "Baylan Skoll" },
+];
+const carousel_stills = [
+	{ image: stills_01, name: "Ahsoka Tano" },
+	{ image: stills_02, name: "Ahsoka Tano" },
+	{ image: stills_03, name: "Baylan Skoll" },
 ];
 
 export {
@@ -441,4 +488,6 @@ export {
 	youtube,
 	carousel,
 	carousel_character,
+	carousel_poster,
+	carousel_stills,
 };

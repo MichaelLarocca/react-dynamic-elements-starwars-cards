@@ -1,4 +1,7 @@
 export function mapItems(items, Component, setSelectedItem, selectedItem, contentType) {
+    if (!Array.isArray(items)) {
+        return null;
+    }
     return items.map((item, index) => {
         return (
             <Component 

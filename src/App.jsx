@@ -13,6 +13,8 @@ import {
 	youtube,
 	carousel,
 	carousel_character,
+	carousel_poster,
+	carousel_stills,
 } from "./data.js";
 import Navbar from "./components/Navbar";
 import StarWarsCard from "./components/StarWarsCard";
@@ -23,7 +25,7 @@ import "./App.css";
 function App() {
 	const [selectedItem, setSelectedItem] = useState(null);
 	const [items, setItems] = useState(characters);
-	const [selectedCategory, setSelectedCategory] = useState(characters);
+	const [selectedCategory, setSelectedCategory] = useState(null);
 	const [showCarousel, setShowCarousel] = useState(false);
 	const categories = {
 		characters,
@@ -37,7 +39,9 @@ function App() {
 	};
 
 	useEffect(() => {
-		setSelectedItem(selectedCategory[0]);
+		if (selectedCategory && selectedCategory.length > 0) {
+			setSelectedItem(selectedCategory[0]);
+		}
 	}, [selectedCategory]);
 
 	return (
@@ -77,12 +81,12 @@ function App() {
 			)}
 			{showCarousel && (
 				<Carousel>
-					{carousel_character.map((character) => (
-						<div key={character.name}>
-							<img src={character.image} />
-							<p className="legend">{character.name}</p>
+					{selectedCategory && selectedCategory.map((item) => (
+						<div key={item.name}>
+							<img src={item.image} />
+							<p className="legend">{item.name}</p>
 						</div>
-        			))}
+					))}
 				</Carousel>
 			)}
 		</>

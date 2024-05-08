@@ -1,24 +1,24 @@
-import { carousel } from "../data.js";
+import { carousel_character, carousel_poster, carousel_stills } from "../data.js";
 
-export default function CarouselMenu({
-    setSelectedCategory,
-    setShowCarousel
-}) {
-    // const carousel = {
-    //     character: 'Character Gallery',
-    //     poster: 'Poster Gallery',
-    //     stills: 'Stills Gallery'
-    // };
+export default function CarouselMenu({ setSelectedCategory, setShowCarousel }) {
+    const categoriesMap = {
+        character: carousel_character,
+        poster: carousel_poster,
+        stills: carousel_stills
+    };
+
+    const handleCategoryChange = (category) => {
+        setSelectedCategory(categoriesMap[category] || categoriesMap['character']);
+        // setSelectedImage(selectedCategory[0]); 
+        setShowCarousel(true);
+    };
 
     return (
         <menu>
-            {Object.keys(carousel).map((category) => (
+            {Object.keys(categoriesMap).map((category) => (
                 <button
                     key={category}
-                    onClick={() => {
-                        setSelectedCategory(carousel[category]);
-                        setShowCarousel(true);
-                    }}
+                    onClick={() => handleCategoryChange(category)}
                 >
                     {category.charAt(0).toUpperCase() + category.slice(1)}
                 </button>
