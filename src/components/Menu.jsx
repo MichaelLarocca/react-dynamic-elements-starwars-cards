@@ -13,7 +13,7 @@ export default function Menu({
 			{Object.keys(categories)
 				.filter((category) => category !== "youtube")
 				.map((category) => (
-					<button
+					<button className="button-sw"
 						key={category}
 						onClick={() => {
 							setSelectedCategory(categories[category]);

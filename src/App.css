@@ -18,7 +18,7 @@ nav {
 	font-weight: bolder;
 }
 
-button {
+.button-sw {
 	margin: 3px;
 	padding: 0;
 	width: 100%;
@@ -28,8 +28,8 @@ button {
 	font-size: xx-large;
 }
 
-button:hover,
-button:focus {
+.button-sw:hover,
+.button-sw:focus {
 	background-color: white;
 	color: black;
 }
@@ -323,7 +323,7 @@ div.hamburger-menu {
 		font-size: medium;
 	}
 
-	button {
+	.button-sw {
 		font-size: small;
 	}
 }

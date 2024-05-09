@@ -20,7 +20,7 @@ import Navbar from "./components/Navbar";
 import StarWarsCard from "./components/StarWarsCard";
 import SmallCardContent from "./components/SmallCardContent";
 import LargeCardContent from "./components/LargeCardContent";
-import "./App.css";
+// import "./App.css";
 
 function App() {
 	const [selectedItem, setSelectedItem] = useState(null);

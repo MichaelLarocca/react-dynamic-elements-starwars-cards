@@ -16,7 +16,7 @@ export default function CarouselMenu({ setSelectedCategory, setShowCarousel }) {
     return (
         <menu>
             {Object.keys(categoriesMap).map((category) => (
-                <button
+                <button className="button-sw"
                     key={category}
                     onClick={() => handleCategoryChange(category)}
                 >
