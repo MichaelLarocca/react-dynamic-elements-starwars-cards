@@ -80,7 +80,7 @@ function App() {
 				/>
 			)}
 			{showCarousel && (
-				<Carousel>
+				<Carousel className="ctn-carousel">
 					{selectedCategory && selectedCategory.map((item) => (
 						<div key={item.name}>
 							<img src={item.image} />

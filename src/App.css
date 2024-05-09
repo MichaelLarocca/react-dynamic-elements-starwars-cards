@@ -18,6 +18,10 @@ nav {
 	font-weight: bolder;
 }
 
+.ctn-carousel {
+	margin-top: 10px;
+}
+
 .button-sw {
 	margin: 3px;
 	padding: 0;
