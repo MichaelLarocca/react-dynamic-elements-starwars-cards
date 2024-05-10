@@ -25,7 +25,7 @@ import "./App.css";
 function App() {
 	const [selectedItem, setSelectedItem] = useState(null);
 	const [items, setItems] = useState(characters);
-	const [selectedCategory, setSelectedCategory] = useState(null);
+	const [selectedCategory, setSelectedCategory] = useState(characters);
 	const [showCarousel, setShowCarousel] = useState(false);
 	const categories = {
 		characters,
