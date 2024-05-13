@@ -18,10 +18,6 @@ nav {
 	font-weight: bolder;
 }
 
-.ctn-carousel {
-	margin-top: 10px;
-}
-
 .button-sw {
 	margin: 3px;
 	padding: 0;
@@ -74,7 +70,7 @@ div.navbar-buttons {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	z-index: 2;
+	z-index: 1;
 }
 
 .dropdown-menu.dropdown-menu-carousel {
@@ -100,7 +96,7 @@ div.hamburger-menu {
 	padding: 10px;
 	cursor: pointer;
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 }
 
 .hamburger-menu .dropdown-menu {
@@ -276,12 +272,12 @@ div.hamburger-menu {
 	}
 }
 
-.carousel {
-	z-index: 0;
+.ctn-carousel {
+	margin-top: 10px;
 }
 
-.carousel .slide {
-	height: 350px;
+.carousel {
+	z-index: 0;
 }
 
 .carousel .slide img {
