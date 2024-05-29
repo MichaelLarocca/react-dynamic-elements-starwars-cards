@@ -20,6 +20,7 @@ import Navbar from "./components/Navbar";
 import StarWarsCard from "./components/StarWarsCard";
 import SmallCardContent from "./components/SmallCardContent";
 import LargeCardContent from "./components/LargeCardContent";
+import News from "./components/News";
 import "./App.css";
 
 function App() {
@@ -89,6 +90,7 @@ function App() {
 					))}
 				</Carousel>
 			)}
+			{/* <News /> */}
 		</>
 	);
 }

@@ -285,6 +285,52 @@ div.hamburger-menu {
 	object-fit: contain; 
 }
 
+.news__image-main {
+	width: 100%;
+}
+
+.news__image-body {
+	width: 75%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}	
+
+.news__about { 
+	border-bottom :1px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	height: 100px;
+}
+
+.ctn-news-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.gray {
+	color: gray;
+}
+
+.news__image-author {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+
+.ctn-news-author,
+.ctn-news-date {
+	margin: 5px;
+}
+
+.news__footer {
+	text-align: center;
+	margin-bottom: 25px;
+}
+
 @media (min-width: 750px) {
 	nav {
 		justify-content: center;
@@ -325,5 +371,16 @@ div.hamburger-menu {
 
 	.button-sw {
 		font-size: small;
+	}
+
+	.news__about {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.ctn-news {
+		width: 700px;
+		margin: 0 auto;
 	}
 }
