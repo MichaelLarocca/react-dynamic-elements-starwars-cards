@@ -1,18 +1,19 @@
+import { news } from "../data.js";
 
-function News() {
+function News({news}) {
   return (
     <div className="ctn-news">
-      <img src="https://via.placeholder.com/150" alt="Placeholder" className="news__image-main" />
+      <img src={news[2].image_title} alt="Placeholder" className="news__image-main" />
       <div className="news__title">
-        <h1>Join Forces with Sabine Wren at Star Wars: Galaxy’s Edge – Reveal</h1>
-        <h4>Meet the Mandalorian warrior from Ahsoka and Star Wars Rebels inside the market at Batuu.</h4>  
+        <h1>{news[2].title}</h1>
+        <h4>{news[2].sub_title}</h4>
       </div>
       <div className="news__about"> 
         <div className="ctn-news-header">
           <img src="src/images/news/BB-8.jpeg" width="50px" height="50px" alt="Placeholder" className="news__image-author" />
           <div>
-            <p className="ctn-news-author gray"><strong>By:</strong> Star Wars Team</p>
-            <p  className="ctn-news-date gray"><strong>date:</strong> April 5, 2024</p>
+            <p className="ctn-news-author gray"><strong>By:</strong> {news[2].by}</p>
+            <p  className="ctn-news-date gray"><strong>date:</strong> {news[2].date}</p>
           </div>
         </div>
         <div className="news__social-icons">
@@ -22,11 +23,11 @@ function News() {
       </div>
       <div className="news__content">
         <p>
-        Sabine Wren, the colorful Mandalorian warrior and Padawan to Ahsoka Tano, is making her way to Star Wars: Galaxy’s Edge at Disneyland Resort. And today, StarWars.com has your first look at her latest, limited-time appearance!
+        {news[2].paragraph_1}
         </p>
-        <img src="https://via.placeholder.com/150" alt="Placeholder" className="news__image-body"/>
+        <img src={news[2].image_1} alt="Placeholder" className="news__image-body"/>
         <p>
-        With her short-cropped purple hair, unique beskar armor including stunning red and purple helmet, and her lightsaber at her hip, the artist and Rebel has officially arrived on Batuu. Sharp-eyed visitors may spot her exploring the districts near Black Spire Outpost.
+        {news[2].paragraph_2}
         </p>
       </div>
       <div className="news__footer">

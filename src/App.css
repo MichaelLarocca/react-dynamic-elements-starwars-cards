@@ -287,6 +287,7 @@ div.hamburger-menu {
 
 .news__image-main {
 	width: 100%;
+	margin-top: 15px;
 }
 
 .news__image-body {
@@ -297,7 +298,7 @@ div.hamburger-menu {
 }	
 
 .news__about { 
-	border-bottom :1px solid black;
+	border-bottom :2px solid gray;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

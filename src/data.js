@@ -122,6 +122,16 @@ import stills_12 from "./images/carousel/stills/stills_12.jpeg";
 import stills_13 from "./images/carousel/stills/stills_13.jpeg";
 import stills_14 from "./images/carousel/stills/stills_14.jpeg";
 
+// News Images
+import story_0_image_title from "./images/news/story_0/story_0_image_title.jpeg";
+import story_0_image_1 from "./images/news/story_0/story_0_image_1.jpeg";
+
+import story_1_image_title from "./images/news/story_1/story_1_image_title.jpeg";
+import story_1_image_1 from "./images/news/story_1/story_1_image_1.jpeg";
+
+import story_2_image_title from "./images/news/story_2/story_2_image_title.jpeg";
+import story_2_image_1 from "./images/news/story_2/story_2_image_1.jpeg";
+
 const characters = [
 	{
 		name: "Ahsoka Tano",
@@ -517,6 +527,60 @@ const carousel_stills = [
 	{ image: stills_14, name: "Stills 14" },
 ];
 
+const news = [
+	{
+		story: 0,
+		image_title: story_0_image_title,
+		title: 'Join Forces with Sabine Wren at Star Wars: Galaxy’s Edge – Reveal',
+		sub_title: 'Meet the Mandalorian warrior from Ahsoka and Star Wars Rebels inside the market at Batuu.',
+		by: 'Star Wars Team',
+		date: 'April 5, 2024',
+		paragraph_1: 'Sabine Wren, the colorful Mandalorian warrior and Padawan to Ahsoka Tano, is making her way to Star Wars: Galaxy’s Edge at Disneyland Resort. And today, StarWars.com has your first look at her latest, limited-time appearance!',
+		image_1: story_0_image_1,
+		paragraph_2: 'With her short-cropped purple hair, unique beskar armor including stunning red and purple helmet, and her lightsaber at her hip, the artist and Rebel has officially arrived on Batuu. Sharp-eyed visitors may spot her exploring the districts near Black Spire Outpost.',
+	},
+	{
+		story: 1,
+		image_title: story_1_image_title,
+		title: 'Ahsoka Season 2 in Development, New Sketch Revealed',
+		sub_title: 'See a new sketch from Dave Filoni teasing the follow up to the hit Disney+ series.',
+		by: 'Star Wars Team',
+		date: 'January 11, 2024',
+		paragraph_1: `The story continues… Following the news that Ahsoka Season 2 is in development (mentioned in the announcement of the upcoming The Mandalorian & Grogu film) for Disney+, Lucasfilm revealed today a new sketch from series creator Dave Filoni.`,
+		image_1: story_1_image_1,
+		paragraph_2: `The image depicts Ahsoka Tano and her apprentice, Sabine Wren, atop one of the ancient statues seen on Peridea in Season 1, with the words “The story continues” in the sky. For more on Ahsoka, check out StarWars.com’s Season 1 Episode Guides, see behind-the-scenes images shared by the cast, or take our quiz and see how well you know Ahsoka Tano.`,
+	},
+	{
+		story: 2,
+		image_title: story_2_image_title,
+		title: 'Marvel to Launch Ahsoka Comic Adaptation - Exclusive Reveal',
+		sub_title: 'Get your first look at the cover for issue #1, following the events of the Disney+ series!',
+		by: 'Star Wars Team',
+		date: 'February 2, 2024',
+		paragraph_1: `Ahsoka Tano is back!
+
+		Anakin Skywalker’s Padawan recently returned to the screen in the critically acclaimed Disney+’s series Ahsoka. And this summer, her adventures with Sabine Wren, Hera Syndulla, and Professor Huyang are coming to your favorite comic book shop.
+		
+		StarWars.com is thrilled to announce that Marvel will adapt the series — alongside other fan-favorite Disney+ comics adaptations including The Mandalorian and Obi-Wan Kenobi — with Star Wars: Ahsoka arriving in July. The 8-issue miniseries is written by Rodney Barnes with pencils from Steven Cummings and Georges Jeanty, following the story of each episode from the first season. Season 2 is currently in development.
+		
+		“It is truly an honor to be adapting Ahsoka,” Barnes tells StarWars.com. “The character is the essence of classic Star Wars: layered, complex and fun! I hope the fans enjoy this adaptation as much as the series it’s adapted from.”
+		
+		Plus, today we have your first look at the cover for issue #1 by David Nakayama, variant covers from Annie Wu and Jan Duuresma, and the official description.`,
+		image_1: story_2_image_1,
+		paragraph_2: `Star Wars: Ahsoka #1 (of 8)
+
+		Written by Rodney Barnes
+		
+		Art by Steven Cummings
+		
+		Cover by David Nakayama
+		
+		After the fall of THE EMPIRE, Jedi Master AHSOKA TANO stalks the galaxy for GRAND ADMIRAL THRAWN!
+		
+		A valuable prisoner escapes New Republic custody; a search for answers reunites two old friends. The villainous MORGAN ELSBETH returns along with two new mysterious Force-users, BAYLAN SKOLL and his apprentice, SHIN HATI.`,
+	},
+]
+
 export {
 	characters,
 	creatures,
@@ -530,4 +594,5 @@ export {
 	carousel_character,
 	carousel_poster,
 	carousel_stills,
+	news,
 };

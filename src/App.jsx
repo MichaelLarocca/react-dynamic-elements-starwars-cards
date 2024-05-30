@@ -15,6 +15,7 @@ import {
 	carousel_character,
 	carousel_poster,
 	carousel_stills,
+	news,
 } from "./data.js";
 import Navbar from "./components/Navbar";
 import StarWarsCard from "./components/StarWarsCard";
@@ -90,7 +91,7 @@ function App() {
 					))}
 				</Carousel>
 			)}
-			{/* <News /> */}
+			<News news={news} />
 		</>
 	);
 }
