@@ -91,7 +91,7 @@ function App() {
 					))}
 				</Carousel>
 			)}
-			<News news={news} />
+			{/* <News news={news} /> */}
 		</>
 	);
 }
