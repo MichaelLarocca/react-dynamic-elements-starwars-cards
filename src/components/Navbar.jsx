@@ -5,6 +5,7 @@ import Menu from "./Menu";
 import HamburgerMenu from "./HamburgerMenu";
 import CarouselMenu from "./CarouselMenu";
 import handleVideoClick from "../utils/helpers";
+import handleNewsClick from "../utils/handleNewsClick"
 
 function Navbar({ categories, setSelectedCategory, setShowCarousel, carousel }) {
 	const [isDatabankVisible, setDatabankVisible] = useState(false);
@@ -22,7 +23,12 @@ function Navbar({ categories, setSelectedCategory, setShowCarousel, carousel }) 
 				<img src={star_wars_logo} className="logo" />
 				<img src={ahsoka_logo} className="logo ahsoka" />
 				<div className="flex ctn-navbar">
-					<div className="navbar-buttons desktop-menu">NEWS</div>
+					<div className="navbar-buttons desktop-menu"
+						onClick={()=>{
+							handleNewsClick({categories, setSelectedCategory});
+							setShowCarousel(false);
+						}}
+					>NEWS</div>
 					<div
 						className="navbar-buttons desktop-menu"
 						onMouseEnter={() => setGalleryVisible(true)}

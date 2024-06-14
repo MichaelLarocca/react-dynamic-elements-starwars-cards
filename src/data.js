@@ -530,8 +530,8 @@ const carousel_stills = [
 const news = [
 	{
 		story: 0,
-		image_title: story_0_image_title,
-		title: 'Join Forces with Sabine Wren at Star Wars: Galaxy’s Edge – Reveal',
+		image: story_0_image_title,
+		name: 'Join Forces with Sabine Wren at Star Wars: Galaxy’s Edge – Reveal',
 		sub_title: 'Meet the Mandalorian warrior from Ahsoka and Star Wars Rebels inside the market at Batuu.',
 		by: 'Star Wars Team',
 		date: 'April 5, 2024',
@@ -541,8 +541,8 @@ const news = [
 	},
 	{
 		story: 1,
-		image_title: story_1_image_title,
-		title: 'Ahsoka Season 2 in Development, New Sketch Revealed',
+		image: story_1_image_title,
+		name: 'Ahsoka Season 2 in Development, New Sketch Revealed',
 		sub_title: 'See a new sketch from Dave Filoni teasing the follow up to the hit Disney+ series.',
 		by: 'Star Wars Team',
 		date: 'January 11, 2024',
@@ -552,8 +552,8 @@ const news = [
 	},
 	{
 		story: 2,
-		image_title: story_2_image_title,
-		title: 'Marvel to Launch Ahsoka Comic Adaptation - Exclusive Reveal',
+		image: story_2_image_title,
+		name: 'Marvel to Launch Ahsoka Comic Adaptation - Exclusive Reveal',
 		sub_title: 'Get your first look at the cover for issue #1, following the events of the Disney+ series!',
 		by: 'Star Wars Team',
 		date: 'February 2, 2024',

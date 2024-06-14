@@ -27,7 +27,7 @@ import "./App.css";
 function App() {
 	const [selectedItem, setSelectedItem] = useState(null);
 	const [items, setItems] = useState(characters);
-	const [selectedCategory, setSelectedCategory] = useState(characters);
+	const [selectedCategory, setSelectedCategory] = useState(news);
 	const [showCarousel, setShowCarousel] = useState(false);
 	const categories = {
 		characters,
@@ -38,6 +38,7 @@ function App() {
 		vehicles,
 		weapons_and_tech,
 		youtube,
+		news,
 	};
 
 	useEffect(() => {
@@ -64,7 +65,7 @@ function App() {
 					)}
 				</section>
 			)}
-			{!showCarousel && (
+			{!showCarousel && selectedCategory !== news && (
 				<StarWarsCard
 					type="article"
 					contentType={LargeCardContent}
@@ -91,7 +92,7 @@ function App() {
 					))}
 				</Carousel>
 			)}
-			{/* <News news={news} /> */}
+			{selectedCategory === news && <News news={news} storyNumber={0} />}
 		</>
 	);
 }
