@@ -1,4 +1,5 @@
 import { news } from "../data.js";
+import BB8 from "../images/news/BB8.jpeg";
 
 function News({news, storyNumber}) {
   return (
@@ -10,7 +11,8 @@ function News({news, storyNumber}) {
       </div>
       <div className="news__about"> 
         <div className="ctn-news-header">
-          <img src="src/images/news/BB-8.jpeg" width="50px" height="50px" alt="Placeholder" className="news__image-author" />
+          {/* <img src="src/images/news/BB-8.jpeg" width="50px" height="50px" alt="Placeholder" className="news__image-author" /> */}
+          <img src={BB8} width="50px" height="50px" alt="Placeholder" className="news__image-author" />
           <div>
             <p className="ctn-news-author gray"><strong>By:</strong> {news[storyNumber].by}</p>
             <p  className="ctn-news-date gray"><strong>date:</strong> {news[storyNumber].date}</p>
