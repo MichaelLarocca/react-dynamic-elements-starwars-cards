@@ -11,7 +11,7 @@ export default function Menu({
                 </button>
             ))}             */}
 			{Object.keys(categories)
-				.filter((category) => category !== "youtube")
+				.filter((category) => category !== "youtube" && category !== "news")
 				.map((category) => (
 					<button className="button-sw"
 						key={category}
