@@ -3,6 +3,7 @@ import Lightsaber from "./Lightsaber";
 import Menu from "./Menu";
 import CarouselMenu from "./CarouselMenu";
 import handleVideoClick from "../utils/helpers";
+import handleNewsClick from "../utils/handleNewsClick";
 
 export default function HamburgerMenu({
 	categories,
@@ -50,7 +51,12 @@ export default function HamburgerMenu({
 			/>
 			{isActive && (
 				<div className="dropdown-menu">
-					<div className="navbar-buttons">NEWS</div>
+					<div className="navbar-buttons"
+						onClick={()=>{
+							handleNewsClick({categories, setSelectedCategory});
+							setShowCarousel(false);
+						}}
+					>NEWS</div>
 					{/* <div className="navbar-buttons">FEATURES</div> */}
 					{/* <div
 						className="navbar-buttons"
