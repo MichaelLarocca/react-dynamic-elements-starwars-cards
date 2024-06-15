@@ -28,7 +28,9 @@ function Navbar({ categories, setSelectedCategory, setShowCarousel, carousel }) 
 							handleNewsClick({categories, setSelectedCategory});
 							setShowCarousel(false);
 						}}
-					>NEWS</div>
+					>
+						NEWS
+					</div>
 					<div
 						className="navbar-buttons desktop-menu"
 						onMouseEnter={() => setGalleryVisible(true)}

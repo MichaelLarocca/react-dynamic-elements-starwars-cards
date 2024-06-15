@@ -29,6 +29,9 @@ function App() {
 	const [items, setItems] = useState(characters);
 	const [selectedCategory, setSelectedCategory] = useState(news);
 	const [showCarousel, setShowCarousel] = useState(false);
+
+	const [selectedStory, setSelectedStory] = useState(0);
+
 	const categories = {
 		characters,
 		creatures,
@@ -46,6 +49,14 @@ function App() {
 			setSelectedItem(selectedCategory[0]);
 		}
 	}, [selectedCategory]);
+
+	useEffect(()=> {
+
+		if(selectedCategory === news && selectedItem !== null) {
+			setSelectedStory(selectedItem.story);
+		}
+
+	}, [selectedItem]);
 
 	return (
 		<>
@@ -92,7 +103,7 @@ function App() {
 					))}
 				</Carousel>
 			)}
-			{selectedCategory === news && <News news={news} storyNumber={0} />}
+			{selectedCategory === news && <News news={news} storyNumber={selectedStory} />}
 		</>
 	);
 }
