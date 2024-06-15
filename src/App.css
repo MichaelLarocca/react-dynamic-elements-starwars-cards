@@ -286,6 +286,11 @@ div.hamburger-menu {
 	object-fit: contain; 
 }
 
+.ctn-news {
+	width: 350px;
+	margin: 0 auto;
+}
+
 .news__image-main {
 	width: 100%;
 	margin-top: 15px;
