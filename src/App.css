@@ -287,8 +287,14 @@ div.hamburger-menu {
 }
 
 .ctn-news {
+	border: 1px solid whitesmoke;
+	border-radius: 25px;
 	width: 375px;
 	margin: 0 auto;
+	padding: 25px 50px 0px 50px;
+	background-color: white;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, .02);
+    font-weight: 600;
 }
 
 .news__image-main {
@@ -316,6 +322,11 @@ div.hamburger-menu {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.ctn-news-article {
+    line-height: 1.6;	
+	color: #333;
 }
 
 .gray {

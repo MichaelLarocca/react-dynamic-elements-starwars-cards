@@ -47,7 +47,7 @@ function News({ news, storyNumber }) {
           <div>Social icons go here</div>
         </div>
       </div>
-      <div className="news__content">
+      <div className="news__content ctn-news-article">
         <Article content={articleContent} />
       </div>
       <div className="news__footer">
