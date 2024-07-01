@@ -349,6 +349,18 @@ div.hamburger-menu {
 	margin-bottom: 25px;
 }
 
+.social-icons {
+	border: 2px solid black;
+	margin: 3px;
+	border-radius: 50%;
+}
+
+.social-icons:hover {
+	border: 2px solid black;
+	border-radius: 50%;
+}
+
+
 @media (min-width: 750px) {
 	nav {
 		justify-content: center;

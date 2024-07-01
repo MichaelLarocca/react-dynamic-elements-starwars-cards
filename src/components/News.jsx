@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { news } from "../data.js";
+import { TwitterShareButton, XIcon, LinkedinShareButton, LinkedinIcon } from 'react-share';
 import BB8 from "../images/news/BB8.jpeg";
 
 const Article = ({ content }) => {
@@ -16,9 +18,43 @@ const Article = ({ content }) => {
   );
 };
 
+
 function News({ news, storyNumber }) {
 
   const articleContent = [];
+  const shareUrl = window.location.href;
+  const title = news[storyNumber].name;
+  const hashtags = ['StarWars', 'News'];
+
+  // State for Twitter icon
+  const [twitterBgColor, setTwitterBgColor] = useState('black');
+  const [twitterIconColor, setTwitterIconColor] = useState('white');
+
+  // State for LinkedIn icon
+  const [linkedinBgColor, setLinkedinBgColor] = useState('black');
+  const [linkedinIconColor, setLinkedinIconColor] = useState('white');
+
+  // Event handlers for Twitter icon
+  const handleMouseEnterTwitter = () => {
+    setTwitterBgColor('lightgray');
+    setTwitterIconColor('black');
+  };
+
+  const handleMouseLeaveTwitter = () => {
+    setTwitterBgColor('black');
+    setTwitterIconColor('white');
+  };
+
+  // Event handlers for LinkedIn icon
+  const handleMouseEnterLinkedin = () => {
+    setLinkedinBgColor('lightgray');
+    setLinkedinIconColor('black');
+  };
+
+  const handleMouseLeaveLinkedin = () => {
+    setLinkedinBgColor('black');
+    setLinkedinIconColor('white');
+  };
 
   for (let key in news[storyNumber]) {
     if (key.startsWith('paragraph')) {
@@ -44,7 +80,14 @@ function News({ news, storyNumber }) {
           </div>
         </div>
         <div className="news__social-icons">
-          <div>Social icons go here</div>
+          <div>
+            <TwitterShareButton url={shareUrl} title={title} hashtags={hashtags}>
+              <XIcon size={32} round bgStyle={{ fill: twitterBgColor }} iconFillColor={twitterIconColor} onMouseEnter={handleMouseEnterTwitter} onMouseLeave={handleMouseLeaveTwitter} className="social-icons"/>
+            </TwitterShareButton>
+            <LinkedinShareButton url={shareUrl} title={title}>
+              <LinkedinIcon size={32} round bgStyle={{ fill: linkedinBgColor }} iconFillColor={linkedinIconColor} onMouseEnter={handleMouseEnterLinkedin} onMouseLeave={handleMouseLeaveLinkedin} className="social-icons" />
+            </LinkedinShareButton>
+          </div>
         </div>
       </div>
       <div className="news__content ctn-news-article">
