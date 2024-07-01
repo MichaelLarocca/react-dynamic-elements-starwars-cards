@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { news } from "../data.js";
 import { TwitterShareButton, XIcon, LinkedinShareButton, LinkedinIcon } from 'react-share';
 import BB8 from "../images/news/BB8.jpeg";
@@ -18,13 +18,12 @@ const Article = ({ content }) => {
   );
 };
 
-
 function News({ news, storyNumber }) {
 
   const articleContent = [];
-  const shareUrl = window.location.href;
-  const title = news[storyNumber].name;
-  const hashtags = ['StarWars', 'News'];
+  const [shareUrl, setShareUrl] = useState(window.location.href);
+  const [title, setTitle] = useState(news[storyNumber].name);
+  const [hashtags, setHashtags] = useState(['StarWars', 'News']);
 
   // State for Twitter icon
   const [twitterBgColor, setTwitterBgColor] = useState('black');
@@ -55,6 +54,12 @@ function News({ news, storyNumber }) {
     setLinkedinBgColor('black');
     setLinkedinIconColor('white');
   };
+
+  useEffect(() => {
+    setShareUrl(window.location.href);
+    setTitle(news[storyNumber].name);
+    setHashtags(['StarWars', 'News']);
+  }, [storyNumber]);
 
   for (let key in news[storyNumber]) {
     if (key.startsWith('paragraph')) {
