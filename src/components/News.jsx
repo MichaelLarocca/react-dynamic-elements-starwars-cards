@@ -87,10 +87,10 @@ function News({ news, storyNumber }) {
         <div className="news__social-icons">
           <div>
             <TwitterShareButton url={shareUrl} title={title} hashtags={hashtags}>
-              <XIcon size={32} round bgStyle={{ fill: twitterBgColor }} iconFillColor={twitterIconColor} onMouseEnter={handleMouseEnterTwitter} onMouseLeave={handleMouseLeaveTwitter} className="social-icons"/>
+              <XIcon size={32} round bgStyle={{ fill: twitterBgColor }} iconFillColor={twitterIconColor} imageUrl={news[storyNumber].image} onMouseEnter={handleMouseEnterTwitter} onMouseLeave={handleMouseLeaveTwitter} className="social-icons"/>
             </TwitterShareButton>
             <LinkedinShareButton url={shareUrl} title={title}>
-              <LinkedinIcon size={32} round bgStyle={{ fill: linkedinBgColor }} iconFillColor={linkedinIconColor} onMouseEnter={handleMouseEnterLinkedin} onMouseLeave={handleMouseLeaveLinkedin} className="social-icons" />
+              <LinkedinIcon size={32} round bgStyle={{ fill: linkedinBgColor }} iconFillColor={linkedinIconColor} imageUrl={news[storyNumber].image} onMouseEnter={handleMouseEnterLinkedin} onMouseLeave={handleMouseLeaveLinkedin} className="social-icons" />
             </LinkedinShareButton>
           </div>
         </div>
