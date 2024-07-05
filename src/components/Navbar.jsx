@@ -6,10 +6,12 @@ import HamburgerMenu from "./HamburgerMenu";
 import CarouselMenu from "./CarouselMenu";
 import handleVideoClick from "../utils/helpers";
 import handleNewsClick from "../utils/handleNewsClick"
+import { useNavigate } from 'react-router-dom';
 
 function Navbar({ categories, setSelectedCategory, setShowCarousel, carousel }) {
 	const [isDatabankVisible, setDatabankVisible] = useState(false);
 	const [isGalleryVisible, setGalleryVisible] = useState(false);
+	const navigate = useNavigate();
 
 	return (
 		<nav>
@@ -27,6 +29,7 @@ function Navbar({ categories, setSelectedCategory, setShowCarousel, carousel }) 
 						onClick={()=>{
 							handleNewsClick({categories, setSelectedCategory});
 							setShowCarousel(false);
+							navigate('/news');
 						}}
 					>
 						NEWS

@@ -112,16 +112,18 @@
 
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import MainPage from './components/MainPage'
+import MainPage from './components/MainPage';
+import NewsList from './components/NewsList';
+import Article from './components/Article';
 
 function App() {
 	return (
 	  <Router>
 		<Routes>
 		  {/* <Route exact path="/" component={MainPage} /> */}
-		  <Route path="/" element={<MainPage />} />
-		  {/* <Route path="/news" component={NewsList} /> */}
-		  {/* <Route path="/article/:id" component={Article} /> */}
+		  	<Route path="/" element={<MainPage />} />
+        	<Route path="/news" element={<NewsList />} />
+        	<Route path="/article/:story" element={<Article />} />
 		</Routes>
 	  </Router>
 	);

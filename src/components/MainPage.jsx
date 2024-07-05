@@ -15,22 +15,22 @@ import {
 	carousel_character,
 	carousel_poster,
 	carousel_stills,
-	news,
+	// news,
 } from "../data.js";
 import Navbar from "../components/Navbar";
 import StarWarsCard from "../components/StarWarsCard";
 import SmallCardContent from "../components/SmallCardContent";
 import LargeCardContent from "../components/LargeCardContent";
-import News from "../components/News";
+// import News from "../components/News";
 import "../App.css";
 
 function MainPage() {
 	const [selectedItem, setSelectedItem] = useState(null);
 	const [items, setItems] = useState(characters);
-	const [selectedCategory, setSelectedCategory] = useState(news);
+	const [selectedCategory, setSelectedCategory] = useState(characters);
 	const [showCarousel, setShowCarousel] = useState(false);
 
-	const [selectedStory, setSelectedStory] = useState(0);
+	// const [selectedStory, setSelectedStory] = useState(0);
 
 	const categories = {
 		characters,
@@ -41,7 +41,7 @@ function MainPage() {
 		vehicles,
 		weapons_and_tech,
 		youtube,
-		news,
+		// news,
 	};
 
 	useEffect(() => {
@@ -50,13 +50,13 @@ function MainPage() {
 		}
 	}, [selectedCategory]);
 
-	useEffect(()=> {
+	// useEffect(()=> {
 
-		if(selectedCategory === news && selectedItem !== null) {
-			setSelectedStory(selectedItem.story);
-		}
+	// 	if(selectedCategory === news && selectedItem !== null) {
+	// 		setSelectedStory(selectedItem.story);
+	// 	}
 
-	}, [selectedItem]);
+	// }, [selectedItem]);
 
 	return (
 		<>
@@ -76,7 +76,7 @@ function MainPage() {
 					)}
 				</section>
 			)}
-			{!showCarousel && selectedCategory !== news && (
+			{!showCarousel && selectedCategory && (
 				<StarWarsCard
 					type="article"
 					contentType={LargeCardContent}
@@ -103,7 +103,7 @@ function MainPage() {
 					))}
 				</Carousel>
 			)}
-			{selectedCategory === news && <News news={news} storyNumber={selectedStory} />}
+			{/* {selectedCategory === news && <News news={news} storyNumber={selectedStory} />} */}
 		</>
 	);
 }

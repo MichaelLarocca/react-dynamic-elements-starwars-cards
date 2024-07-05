@@ -1,7 +1,15 @@
-import { useState, useEffect } from "react";
-import { news } from "../data.js";
+// import { useState, useEffect } from "react";
+// import { news } from "../data.js";
 import { TwitterShareButton, XIcon, LinkedinShareButton, LinkedinIcon } from 'react-share';
 import BB8 from "../images/news/BB8.jpeg";
+
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { news } from "../data.js";
+import StarWarsCard from "../components/StarWarsCard";
+import SmallCardContent from "../components/SmallCardContent";
+import News from "../components/News"; // Import the News component
+import "../App.css";
 
 const Article = ({ content }) => {
   return (
@@ -18,7 +26,8 @@ const Article = ({ content }) => {
   );
 };
 
-function News({ news, storyNumber }) {
+// function News({ news, storyNumber }) {
+function NewsArticle({ news, storyNumber }) {
 
   const articleContent = [];
   const [shareUrl, setShareUrl] = useState(window.location.href);
@@ -105,4 +114,5 @@ function News({ news, storyNumber }) {
   );
 }
 
-export default News;
+// export default News;
+export default NewsArticle;
