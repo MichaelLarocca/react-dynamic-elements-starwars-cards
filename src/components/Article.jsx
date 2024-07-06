@@ -31,7 +31,7 @@ function Article() {
   const article = news.find((item) => item.story === parseInt(story));
 
   if (!article) {
-    return <h2>Article not found</h2>;
+    return <h2>Article not found!</h2>;
   }
 
   return (
