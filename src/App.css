@@ -18,6 +18,10 @@ nav {
 	font-weight: bolder;
 }
 
+a {
+    text-decoration: none;
+}
+
 .button-sw {
 	margin: 3px;
 	padding: 0;
