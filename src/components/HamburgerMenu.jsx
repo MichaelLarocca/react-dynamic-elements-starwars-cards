@@ -4,6 +4,7 @@ import Menu from "./Menu";
 import CarouselMenu from "./CarouselMenu";
 import handleVideoClick from "../utils/helpers";
 import handleNewsClick from "../utils/handleNewsClick";
+import { useNavigate } from 'react-router-dom';
 
 export default function HamburgerMenu({
 	categories,
@@ -13,6 +14,7 @@ export default function HamburgerMenu({
 	const [isActive, setIsActive] = useState(false);
 	const [isDatabankVisible, setDatabankVisible] = useState(false);
 	const [isCarouselVisible, setCarouselVisible] = useState(false);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		if (isActive) {
@@ -55,6 +57,7 @@ export default function HamburgerMenu({
 						onClick={()=>{
 							handleNewsClick({categories, setSelectedCategory});
 							setShowCarousel(false);
+							navigate('/news');
 						}}
 					>NEWS</div>
 					{/* <div className="navbar-buttons">FEATURES</div> */}
