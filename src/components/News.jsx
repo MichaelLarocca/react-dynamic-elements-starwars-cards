@@ -1,14 +1,8 @@
-// import { useState, useEffect } from "react";
-// import { news } from "../data.js";
-import { TwitterShareButton, XIcon, LinkedinShareButton, LinkedinIcon } from 'react-share';
+import { TwitterShareButton, TwitterIcon, LinkedinShareButton, LinkedinIcon } from 'react-share';
 import BB8 from "../images/news/BB8.jpeg";
-
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { news } from "../data.js";
-import StarWarsCard from "../components/StarWarsCard";
-import SmallCardContent from "../components/SmallCardContent";
-import News from "../components/News"; // Import the News component
 import "../App.css";
 
 const Article = ({ content }) => {
@@ -26,8 +20,8 @@ const Article = ({ content }) => {
   );
 };
 
-// function News({ news, storyNumber }) {
-function NewsArticle({ news, storyNumber }) {
+function NewsArticle() {
+  const { storyNumber } = useParams();
 
   const articleContent = [];
   const [shareUrl, setShareUrl] = useState(window.location.href);
@@ -96,7 +90,7 @@ function NewsArticle({ news, storyNumber }) {
         <div className="news__social-icons">
           <div>
             <TwitterShareButton url={shareUrl} title={title} hashtags={hashtags}>
-              <XIcon size={32} round bgStyle={{ fill: twitterBgColor }} iconFillColor={twitterIconColor} onMouseEnter={handleMouseEnterTwitter} onMouseLeave={handleMouseLeaveTwitter} className="social-icons"/>
+              <TwitterIcon size={32} round bgStyle={{ fill: twitterBgColor }} iconFillColor={twitterIconColor} onMouseEnter={handleMouseEnterTwitter} onMouseLeave={handleMouseLeaveTwitter} className="social-icons"/>
             </TwitterShareButton>
             <LinkedinShareButton url={shareUrl} title={title}>
               <LinkedinIcon size={32} round bgStyle={{ fill: linkedinBgColor }} iconFillColor={linkedinIconColor} onMouseEnter={handleMouseEnterLinkedin} onMouseLeave={handleMouseLeaveLinkedin} className="social-icons" />
@@ -114,5 +108,4 @@ function NewsArticle({ news, storyNumber }) {
   );
 }
 
-// export default News;
 export default NewsArticle;

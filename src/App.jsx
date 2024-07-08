@@ -115,6 +115,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MainPage from './components/MainPage';
 import NewsList from './components/NewsList';
 import Article from './components/Article';
+import NewsArticle from './components/News';
 
 function App() {
 	return (
@@ -123,7 +124,7 @@ function App() {
 		  {/* <Route exact path="/" component={MainPage} /> */}
 		  	<Route path="/" element={<MainPage />} />
         	<Route path="/news" element={<NewsList />} />
-        	<Route path="/article/:story" element={<Article />} />
+			<Route path="/article/:storyNumber" element={<NewsArticle />} />
 		</Routes>
 	  </Router>
 	);
