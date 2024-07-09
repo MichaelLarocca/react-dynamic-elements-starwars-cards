@@ -138,6 +138,8 @@ div.hamburger-menu {
 
 .mainpage-container {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 	padding: 5px;
 }
 
@@ -146,6 +148,7 @@ div.hamburger-menu {
 }
 
 .mainpage-image {
+	width: 200px;
 	height: 300px;
 }
 
@@ -403,10 +406,12 @@ p.mainpage-description {
 	.mainpage-container {
 		width: 800px;
 		margin: 0 auto;
+		flex-direction: row;
 	}
 
 	.mainpage-image {
 		height: 500px;
+		width: 350px;
 	}
 	
 
