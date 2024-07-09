@@ -15,19 +15,21 @@ import {
 	carousel_character,
 	carousel_poster,
 	carousel_stills,
+	mainpage,
 	// news,
 } from "../data.js";
 import Navbar from "../components/Navbar";
 import StarWarsCard from "../components/StarWarsCard";
 import SmallCardContent from "../components/SmallCardContent";
 import LargeCardContent from "../components/LargeCardContent";
+import MainPageDisplay from "../components/MainPageDisplay.jsx";
 // import News from "../components/News";
 import "../App.css";
 
 function MainPage() {
 	const [selectedItem, setSelectedItem] = useState(null);
 	const [items, setItems] = useState(characters);
-	const [selectedCategory, setSelectedCategory] = useState(characters);
+	const [selectedCategory, setSelectedCategory] = useState(mainpage);
 	const [showCarousel, setShowCarousel] = useState(false);
 
 	// const [selectedStory, setSelectedStory] = useState(0);
@@ -41,6 +43,7 @@ function MainPage() {
 		vehicles,
 		weapons_and_tech,
 		youtube,
+		mainpage,
 		// news,
 	};
 
@@ -65,7 +68,8 @@ function MainPage() {
 				setSelectedCategory={setSelectedCategory}
 				setShowCarousel={setShowCarousel}
 			/>
-			{!showCarousel && (
+			{selectedCategory === categories.mainpage && <MainPageDisplay />}
+			{!showCarousel && selectedCategory !== categories.mainpage && (
 				<section className="small-card-container">
 					{mapItems(
 						selectedCategory,
@@ -76,7 +80,7 @@ function MainPage() {
 					)}
 				</section>
 			)}
-			{!showCarousel && selectedCategory && (
+			{!showCarousel && selectedCategory && selectedCategory !== categories.mainpage && (
 				<StarWarsCard
 					type="article"
 					contentType={LargeCardContent}
@@ -93,7 +97,7 @@ function MainPage() {
 					interaction="hoverable"
 				/>
 			)}
-			{showCarousel && (
+			{showCarousel && selectedCategory !== categories.mainpage && (
 				<Carousel className="ctn-carousel">
 					{selectedCategory && selectedCategory.map((item) => (
 						<div key={item.name}>

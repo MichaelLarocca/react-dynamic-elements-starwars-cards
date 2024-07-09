@@ -22,8 +22,8 @@ function Navbar({ categories, setSelectedCategory, setShowCarousel, carousel }) 
 				setShowCarousel={setShowCarousel}
 			/>
 			<div className="flex-col">
-				<img src={star_wars_logo} className="logo" />
-				<img src={ahsoka_logo} className="logo ahsoka" />
+				<img src={star_wars_logo} className="logo" onClick={() => {setSelectedCategory(categories.mainpage); navigate('/');}} />
+				<img src={ahsoka_logo} className="logo ahsoka" onClick={() => {setSelectedCategory(categories.mainpage); navigate('/');}} />
 				<div className="flex ctn-navbar">
 					<div className="navbar-buttons desktop-menu"
 						onClick={()=>{

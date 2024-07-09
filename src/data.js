@@ -1,3 +1,6 @@
+//Main page
+import ahsoka_tano_logo from "../public/ahsoka-tano-logo.png";
+
 // Characters
 import admiral_ackbar from "./images/characters/ADMIRAL-ACKBAR.jpeg";
 import ahsoka from "./images/characters/ahsoka.jpeg";
@@ -576,6 +579,23 @@ const news = [
 	},	
 ]
 
+const mainpage = [
+	{
+		ahsoka_tano_logo: ahsoka_tano_logo,
+		image: posters_ahsoka,
+		name: `Ahsoka`,
+		paragraph_1:`Rating:
+TV-14`,
+		paragraph_2:`Release Date:
+August 22, 2023`,
+		paragraph_3:`Genre:
+Action, Adventure, Science Fiction`,
+		paragraph_4:`Set after the fall of the Empire, "Ahsoka" follows the former Jedi knight Ahsoka Tano as she investigates an emerging threat to a vulnerable galaxy.`,
+		paragraph_5:`Era: The New Republic
+`,
+	}
+]
+
 export {
 	characters,
 	creatures,
@@ -590,4 +610,5 @@ export {
 	carousel_poster,
 	carousel_stills,
 	news,
+	mainpage,
 };

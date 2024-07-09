@@ -136,6 +136,36 @@ div.hamburger-menu {
 	width: 125px;
 }
 
+.mainpage-container {
+	display: flex;
+	padding: 5px;
+}
+
+.mainpage-container div {
+	margin-left: 50px;
+}
+
+.mainpage-image {
+	height: 300px;
+}
+
+.mainpage-icon-ctn {
+	display: flex;
+	align-items: center;
+}
+
+.mainpage-icon {
+	height: 25px;
+	width: 25px;
+	margin-right: 5px;
+}
+
+p.mainpage-description {
+	font-weight: bolder;
+	font-size: small;
+	margin: 0;
+}
+
 .small-card-container {
 	display: flex;
 	overflow-x: auto;
@@ -369,6 +399,16 @@ div.hamburger-menu {
 	nav {
 		justify-content: center;
 	}
+
+	.mainpage-container {
+		width: 800px;
+		margin: 0 auto;
+	}
+
+	.mainpage-image {
+		height: 500px;
+	}
+	
 
 	.large-card {
 		flex-direction: row;
