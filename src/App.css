@@ -361,6 +361,24 @@ p.mainpage-description {
 	align-items: center;
 }
 
+.ctn-news-list {
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Change to relative to allow absolute positioning of children */
+    width: 100%; /* Ensure the container takes the full width */
+    height: 100%; /* Ensure the container takes the full height */
+}
+
+.news-logo {
+    position: absolute; /* Use absolute positioning */
+    left: 50%; /* Move the element to the center of the screen */
+    transform: translateX(-50%); /* Offset the element by half of its own width */
+    height: 700px;
+    width: 700px;
+    z-index: -1;
+	opacity: 0.1;
+}
+ 
 .ctn-news-article {
     line-height: 1.6;	
 	color: #333;

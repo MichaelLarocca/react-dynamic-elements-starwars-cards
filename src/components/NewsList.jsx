@@ -17,7 +17,7 @@ function NewsList() {
     }, []);
 
     return (
-        <div>
+        <div className="ctn-news-list">
             <h1>News List</h1>
             <section className="small-card-container">
                 {mapItems(
@@ -29,7 +29,7 @@ function NewsList() {
                     "/article"
                 )}
             </section>
-            <img src={news_logo} alt="News Logo" />
+            <img src={news_logo} alt="News Logo" className="news-logo" />
         </div>
     );
 }
