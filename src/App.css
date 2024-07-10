@@ -373,10 +373,11 @@ p.mainpage-description {
     position: absolute; /* Use absolute positioning */
     left: 50%; /* Move the element to the center of the screen */
     transform: translateX(-50%); /* Offset the element by half of its own width */
-    height: 700px;
-    width: 700px;
+    height: 400px;
+    width: 400px;
     z-index: -1;
 	opacity: 0.1;
+	top: 300px;
 }
  
 .ctn-news-article {
@@ -479,5 +480,11 @@ p.mainpage-description {
 	.ctn-news {
 		width: 700px;
 		margin: 0 auto;
+	}
+
+	.news-logo {
+		width: 700px;
+		height: 700px;
+		top: 0px;
 	}
 }
