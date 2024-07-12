@@ -1,36 +1,16 @@
-// export function mapItems(items, Component, setSelectedItem, selectedItem, contentType) {
-//     if (!Array.isArray(items)) {
-//         return null;
-//     }
-//     return items.map((item, index) => {
-//         return (
-//             <Component 
-//                 key={index} 
-//                 type="div" 
-//                 contentType={contentType} 
-//                 contentProps={{
-//                     ...item,
-//                     isSelected: selectedItem ? selectedItem === item : index === 0
-//                 }} 
-//                 layout="small-card" 
-//                 theme="dark-theme" 
-//                 interaction="clickable" 
-//                 onClick={() => setSelectedItem(item)} 
-//             />
-//         )
-//     });
-// }
-
-import { Link } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 
 export function mapItems(items, Component, setSelectedItem, selectedItem, contentType, linkPath) {
+    const location = useLocation();
+    
     if (!Array.isArray(items)) {
         return null;
     }
     return items.map((item, index) => {
+        const isSelected = location.pathname !== '/news' && (selectedItem ? selectedItem === item : index === 0);
         const contentProps = {
             ...item,
-            isSelected: selectedItem ? selectedItem === item : index === 0
+            isSelected
         };
 
         const card = (
