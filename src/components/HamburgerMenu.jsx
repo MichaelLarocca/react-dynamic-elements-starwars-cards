@@ -199,7 +199,7 @@ export default function HamburgerMenu({
             onClick={() => {
               handleVideoClick({ categories, setSelectedCategory });
               setShowCarousel(false);
-              handleNavigation('/videos'); // Assuming you have a route for videos
+              handleNavigation('/');
             }}
           >
             VIDEO
