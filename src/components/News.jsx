@@ -3,6 +3,9 @@ import BB8 from "../images/news/BB8.jpeg";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { news } from "../data.js";
+import StarWarsCard from "../components/StarWarsCard";
+import SmallCardContent from "../components/SmallCardContent";
+import { mapItems } from "../utils/mapFunctions.jsx";
 import "../App.css";
 
 const Article = ({ content }) => {
@@ -22,6 +25,7 @@ const Article = ({ content }) => {
 
 function NewsArticle() {
   const { storyNumber } = useParams();
+  const [selectedItem, setSelectedItem] = useState(news[storyNumber]);
 
   const articleContent = [];
   const [shareUrl, setShareUrl] = useState(window.location.href);
@@ -62,6 +66,7 @@ function NewsArticle() {
     setShareUrl(window.location.href);
     setTitle(news[storyNumber].name);
     setHashtags(['StarWars', 'News']);
+    setSelectedItem(news[storyNumber]);
   }, [storyNumber]);
 
   for (let key in news[storyNumber]) {
@@ -73,6 +78,17 @@ function NewsArticle() {
   }
 
   return (
+    <>
+    <section className="small-card-container">
+      {mapItems(
+        news,
+        StarWarsCard,
+        setSelectedItem,
+        selectedItem,
+        SmallCardContent,
+        "/article"
+      )}
+    </section>
     <div className="ctn-news">
       <img src={news[storyNumber].image} alt="Placeholder" className="news__image-main" />
       <div className="news__title">
@@ -105,6 +121,7 @@ function NewsArticle() {
         <footer><strong>StarWars.com. All Star Wars, all the time.</strong></footer>
       </div>
     </div>
+    </>
   );
 }
 
