@@ -1,6 +1,9 @@
 //Main page
 import ahsoka_tano_logo from "../public/ahsoka-tano-logo.png";
 
+// 404
+// import page_not_found from "../public/page_not_found.png";
+
 // Characters
 import admiral_ackbar from "./images/characters/ADMIRAL-ACKBAR.jpeg";
 import ahsoka from "./images/characters/ahsoka.jpeg";

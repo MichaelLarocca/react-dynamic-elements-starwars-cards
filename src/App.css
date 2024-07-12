@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background-color: whitesmoke;
+	background-color: #EAEAEA;
 	font-family: "Roboto", sans-serif;
 	min-width: 400px;
 }
@@ -16,10 +16,27 @@ nav {
 	align-items: center;
 	font-size: 25px;
 	font-weight: bolder;
+	z-index: 2;
 }
 
 a {
     text-decoration: none;
+}
+
+.not-found-container {
+    display: flex; /* Center the content */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: calc(100vh - 100px); /* Adjust height to account for Navbar */
+    margin-top: 100px; /* Push the container below the Navbar */
+    z-index: 0; /* Ensure it stays below the Navbar */
+}
+
+.responsive-image {
+    width: 100%; /* Adjusts the image width to 100% of its container */
+    max-width: 100%; /* Ensures the image does not exceed its original size */
+    height: auto; /* Maintains the aspect ratio */
+	filter: invert(100%);
 }
 
 .button-sw {
@@ -329,7 +346,7 @@ p.mainpage-description {
 	width: 300px;
 	margin: 0 auto;
 	padding: 25px 50px 0px 50px;
-	background-color: white;
+	background-color: whitesmoke;
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, .02);
     font-weight: 600;
 }
