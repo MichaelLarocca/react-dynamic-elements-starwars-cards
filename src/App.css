@@ -8,45 +8,57 @@ body {
 }
 
 nav {
-	background-color: black;
-	color: white;
-	height: 100px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-size: 25px;
-	font-weight: bolder;
-	z-index: 2;
+    background-color: black;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bolder;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
+
 
 a {
     text-decoration: none;
 }
 
 .not-found-container {
-    display: flex; /* Center the content */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    height: calc(100vh - 100px); /* Adjust height to account for Navbar */
-    margin-top: 100px; /* Push the container below the Navbar */
-    z-index: 0; /* Ensure it stays below the Navbar */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: calc(100vh - 100px); 
+    padding-top: 100px; 
+    z-index: 0; 
+}
+
+.not-found-container img {
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+    filter: invert(100%);
 }
 
 .responsive-image {
-    width: 100%; /* Adjusts the image width to 100% of its container */
-    max-width: 100%; /* Ensures the image does not exceed its original size */
-    height: auto; /* Maintains the aspect ratio */
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
 	filter: invert(100%);
 }
 
 .button-sw {
+	/* border: 1px solid purple; */
 	margin: 3px;
 	padding: 0;
-	width: 100%;
 	background-color: black;
 	color: white;
 	font-weight: bold;
 	font-size: xx-large;
+	width: 300px;
 }
 
 .button-sw:hover,
@@ -64,6 +76,7 @@ a {
 	color: lightgray;
 	margin: 0 5px;
 	font-size: xx-large;
+	width: 175px;
 }
 
 .navbar-buttons:hover,
@@ -81,13 +94,14 @@ div.navbar-buttons {
 }
 
 .dropdown-menu {
+	/* border: 5px solid red; */
 	position: absolute;
 	margin-top: 6px;
 	margin-left: -25px;
 	padding: 8px;
 	color: white;
-	background-color: black;
-	width: 200px;
+	background-color: rgba(0, 0, 0, .8);
+	width: 350px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -95,8 +109,18 @@ div.navbar-buttons {
 }
 
 .dropdown-menu.dropdown-menu-carousel {
-	margin-left: -10px;
-	width: 65px;
+	/* border: 5px solid blue; */
+	width: 75px;
+	margin-left: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 1;
+}
+.dropdown-menu.dropdown-menu-carousel button {
+	/* border: 5px solid greenyellow; */
+	width: 75px;
+	margin-right: 40px;
 }
 
 .desktop-menu {
@@ -158,6 +182,7 @@ div.hamburger-menu {
 	flex-direction: column;
 	align-items: center;
 	padding: 5px;
+	margin-top: 100px;
 }
 
 .mainpage-container div {
@@ -191,6 +216,7 @@ p.mainpage-description {
 	overflow-x: auto;
 	gap: 10px;
 	padding: 10px;
+	margin-top: 100px;
 }
 
 .small-card {
@@ -328,7 +354,7 @@ p.mainpage-description {
 }
 
 .ctn-carousel {
-	margin-top: 10px;
+	margin-top: 110px;
 }
 
 .carousel {
@@ -381,15 +407,15 @@ p.mainpage-description {
 .ctn-news-list {
     display: flex;
     flex-direction: column;
-    position: relative; /* Change to relative to allow absolute positioning of children */
-    width: 100%; /* Ensure the container takes the full width */
-    height: 100%; /* Ensure the container takes the full height */
+    position: relative; 
+    width: 100%; 
+    height: 100%;
 }
 
 .news-logo {
-    position: absolute; /* Use absolute positioning */
-    left: 50%; /* Move the element to the center of the screen */
-    transform: translateX(-50%); /* Offset the element by half of its own width */
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
     height: 400px;
     width: 400px;
     z-index: -1;
@@ -443,6 +469,7 @@ p.mainpage-description {
 		width: 800px;
 		margin: 0 auto;
 		flex-direction: row;
+		margin-top: 100px;
 	}
 
 	.mainpage-image {
@@ -476,16 +503,21 @@ p.mainpage-description {
 	}
 
 	.dropdown-menu {
+		/* border: 1px solid red; */
 		align-items: flex-end;
 		width: 130px;
 	}
 
 	.navbar-buttons {
+		/* border: 1px solid yellow; */
 		font-size: medium;
+		width: 100px;
+		text-align: center;
 	}
 
 	.button-sw {
 		font-size: small;
+		width: 125px;
 	}
 
 	.news__about {
@@ -503,5 +535,6 @@ p.mainpage-description {
 		width: 700px;
 		height: 700px;
 		top: 0px;
+		margin-top: 100px;
 	}
 }

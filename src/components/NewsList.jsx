@@ -16,7 +16,7 @@ function NewsList({ selectedCategory, setSelectedCategory, selectedItem, setSele
 
   return (
     <div className="ctn-news-list">
-      <h1>News List</h1>
+      {/* <h1>News List</h1> */}
       <section className="small-card-container">
         {mapItems(
           selectedCategory,
