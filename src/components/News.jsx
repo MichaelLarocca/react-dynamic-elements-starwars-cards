@@ -6,6 +6,7 @@ import { news } from "../data.js";
 import StarWarsCard from "../components/StarWarsCard";
 import SmallCardContent from "../components/SmallCardContent";
 import { mapItems } from "../utils/mapFunctions.jsx";
+import NotFound from './NotFound.jsx'; // Ensure this import is added
 import "../App.css";
 
 const Article = ({ content }) => {
@@ -25,11 +26,11 @@ const Article = ({ content }) => {
 
 function NewsArticle() {
   const { storyNumber } = useParams();
-  const [selectedItem, setSelectedItem] = useState(news[storyNumber]);
+  const [selectedItem, setSelectedItem] = useState(news[storyNumber] || null);
 
   const articleContent = [];
   const [shareUrl, setShareUrl] = useState(window.location.href);
-  const [title, setTitle] = useState(news[storyNumber].name);
+  const [title, setTitle] = useState(news[storyNumber]?.name || '');
   const [hashtags, setHashtags] = useState(['StarWars', 'News']);
 
   // State for Twitter icon
@@ -63,11 +64,19 @@ function NewsArticle() {
   };
 
   useEffect(() => {
-    setShareUrl(window.location.href);
-    setTitle(news[storyNumber].name);
-    setHashtags(['StarWars', 'News']);
-    setSelectedItem(news[storyNumber]);
+    if (!news[storyNumber]) {
+      setSelectedItem(null);
+    } else {
+      setSelectedItem(news[storyNumber]);
+      setShareUrl(window.location.href);
+      setTitle(news[storyNumber].name);
+      setHashtags(['StarWars', 'News']);
+    }
   }, [storyNumber]);
+
+  if (!news[storyNumber]) {
+    return <NotFound />;
+  }
 
   for (let key in news[storyNumber]) {
     if (key.startsWith('paragraph')) {

@@ -26,16 +26,16 @@ import MainPageDisplay from "../components/MainPageDisplay.jsx";
 import "../App.css";
 
 function MainPage({ selectedCategory, setSelectedCategory, selectedItem, setSelectedItem, showCarousel, setShowCarousel }) {
-  useEffect(() => {
-    if (selectedCategory && selectedCategory.length > 0) {
-      setSelectedItem(selectedCategory[0]);
-    }
-  }, [selectedCategory]);
+
+  const renderMainPageDisplay = selectedCategory === mainpage;
+  const renderSmallCardContainer = !showCarousel && selectedCategory !== mainpage;
+  const renderLargeCard = !showCarousel && selectedCategory && selectedCategory !== mainpage;
+  const renderCarousel = showCarousel && selectedCategory !== mainpage;
 
   return (
     <>
-      {selectedCategory === mainpage && <MainPageDisplay />}
-      {!showCarousel && selectedCategory !== mainpage && (
+      {renderMainPageDisplay && <MainPageDisplay />}
+      {renderSmallCardContainer && (
         <section className="small-card-container">
           {mapItems(
             selectedCategory,
@@ -46,7 +46,7 @@ function MainPage({ selectedCategory, setSelectedCategory, selectedItem, setSele
           )}
         </section>
       )}
-      {!showCarousel && selectedCategory && selectedCategory !== mainpage && (
+      {renderLargeCard && (
         <StarWarsCard
           type="article"
           contentType={LargeCardContent}
@@ -61,7 +61,7 @@ function MainPage({ selectedCategory, setSelectedCategory, selectedItem, setSele
           interaction="hoverable"
         />
       )}
-      {showCarousel && selectedCategory !== mainpage && (
+      {renderCarousel && (
         <Carousel className="ctn-carousel">
           {selectedCategory && selectedCategory.map((item) => (
             <div key={item.name}>
